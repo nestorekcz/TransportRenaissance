@@ -302,7 +302,7 @@ void RegionalSetupCargo()
 	const std::array<StringID, 6> names{STR_CARGO_PLURAL_FOOD, STR_REGIONAL_CARGO_MINERALS, STR_REGIONAL_CARGO_WOOD, STR_REGIONAL_CARGO_MATERIALS, STR_REGIONAL_CARGO_MACHINERY, STR_REGIONAL_CARGO_RECYCLABLES};
 	for (size_t n = 0; n < labels.size(); ++n) {
 		auto *cs = CargoSpec::Get(12 + n);
-	 *cs = *std::ranges::find(_default_cargo, n == 0 ? CT_FOOD : CT_STEEL, &CargoSpec::label);
+		*cs = *std::ranges::find(_default_cargo, n == 0 ? CT_FOOD : CT_STEEL, &CargoSpec::label);
 		cs->label = labels[n]; cs->bitnum = 32 + n;
 		cs->name = cs->name_single = names[n];
 		if (n) { cs->quantifier = STR_REGIONAL_CARGO_QUANTITY; cs->abbrev = STR_REGIONAL_CARGO_ABBREV; cs->initial_payment = n == 5 ? 1800 : 4500; }

@@ -72,7 +72,7 @@ inline ProductionResult Process(const Definition &d, std::array<uint16_t, None> 
 	for (auto input : d.inputs) if (input.cargo != None && inventory[input.cargo] / input.units < count) {
 		count = inventory[input.cargo] / input.units; r.limit = 1;
 	}
-	if (d.yield && (storage - std::min(storage, output)) / d.yield < count) {
+	if (d.yield && uint32_t(storage - std::min(storage, output)) / d.yield < count) {
 		count = (storage - std::min(storage, output)) / d.yield; r.limit = 2;
 	}
 	/* An efficiency upgrade saves utility demand elsewhere; machinery adds at most 25% throughput.
