@@ -5976,3 +5976,9 @@ STR_BADGE_CONFIG_PREVIEW                                        :Preview Image
 STR_BADGE_CONFIG_NAME                                           :Name
 STR_BADGE_FILTER_ANY_LABEL                                      :Any {STRING}
 STR_BADGE_FILTER_IS_LABEL                                       :{STRING} is {STRING}
+
+############ Transport Renaissance independent fork
+STR_STATION_LIST_ATTENTION                                     :Needs attention
+STR_STATION_LIST_ATTENTION_TOOLTIP                             :{BLACK}Show stations with available waiting cargo and a service rating below 50% for a selected cargo type. This highlights poor cargo service, not track or platform occupancy. Click again to show all stations matching the other filters.
+STR_CONFIG_SETTING_SMOOTH_WATER                                :Smooth water colour animation: {STRING}
+STR_CONFIG_SETTING_SMOOTH_WATER_HELPTEXT                        :Blend water palette colours between animation steps. Cosmetic and local to this client. Disable for the original palette behaviour. Turn off Full animation in the Settings menu to stop palette motion entirely.

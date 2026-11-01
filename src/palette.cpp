@@ -14,6 +14,7 @@
 #include "gfx_type.h"
 #include "landscape_type.h"
 #include "palette_func.h"
+#include "renaissance_gui.h"
 #include "settings_type.h"
 #include "thread.h"
 
@@ -247,7 +248,7 @@ void DoPaletteAnimations()
 	std::lock_guard<std::recursive_mutex> lock(_palette_mutex);
 
 	/* Animation counter for the palette animation. */
-	static int palette_animation_counter = 0;
+	static uint32_t palette_animation_counter = 0;
 	palette_animation_counter += 8;
 
 	Blitter *blitter = BlitterFactory::GetCurrentBlitter();
@@ -329,7 +330,7 @@ void DoPaletteAnimations()
 	s = (_settings_game.game_creation.landscape == LandscapeType::Toyland) ? ev->dark_water_toyland : ev->dark_water;
 	j = EXTR(320, EPV_CYCLES_DARK_WATER);
 	for (uint i = 0; i != EPV_CYCLES_DARK_WATER; i++) {
-		*palette_pos++ = s[j];
+		*palette_pos++ = _settings_client.gui.smooth_water ? SampleWaterPalette({s, EPV_CYCLES_DARK_WATER}, static_cast<uint16_t>(palette_animation_counter * 320), i) : s[j];
 		j++;
 		if (j == EPV_CYCLES_DARK_WATER) j = 0;
 	}
@@ -338,7 +339,7 @@ void DoPaletteAnimations()
 	s = (_settings_game.game_creation.landscape == LandscapeType::Toyland) ? ev->glitter_water_toyland : ev->glitter_water;
 	j = EXTR(128, EPV_CYCLES_GLITTER_WATER);
 	for (uint i = 0; i != EPV_CYCLES_GLITTER_WATER / 3; i++) {
-		*palette_pos++ = s[j];
+		*palette_pos++ = _settings_client.gui.smooth_water ? SampleWaterPalette({s, EPV_CYCLES_GLITTER_WATER}, static_cast<uint16_t>(palette_animation_counter * 128), i * 3) : s[j];
 		j += 3;
 		if (j >= EPV_CYCLES_GLITTER_WATER) j -= EPV_CYCLES_GLITTER_WATER;
 	}

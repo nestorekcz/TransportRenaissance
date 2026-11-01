@@ -206,6 +206,7 @@ struct GUISettings {
 	RightClickClose  right_click_wnd_close;  ///< close window with right click
 	bool   toolbar_dropdown_autoselect;      ///< should toolbar dropdown buttons autoselect when releasing the mouse button
 	bool   pause_on_newgame;                 ///< whether to start new games paused or not
+	bool   smooth_water;                     ///< Interpolate cosmetic water palette cycles locally.
 	SignalGUISettings signal_gui_mode;       ///< select which signal types are shown in the signal GUI
 	SignalCycleSettings cycle_signal_types;  ///< Which signal types to cycle with the build signal tool.
 	SignalType default_signal_type;          ///< The default signal type, which is set automatically by the last signal used. Not available in Settings.

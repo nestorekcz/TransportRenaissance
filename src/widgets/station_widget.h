@@ -51,6 +51,7 @@ enum StationListWidgets : WidgetID {
 	WID_STL_SORTDROPBTN,    ///< Dropdown button.
 
 	WID_STL_CARGODROPDOWN,  ///< Cargo type dropdown list.
+	WID_STL_ATTENTION,      ///< Filter stations with waiting cargo and poor service.
 };
 
 /** Widgets of the #SelectStationWindow class. */

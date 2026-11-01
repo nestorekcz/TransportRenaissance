@@ -16,6 +16,7 @@
 #include "vehicle_gui.h"
 #include "cargotype.h"
 #include "station_gui.h"
+#include "renaissance_gui.h"
 #include "strings_func.h"
 #include "string_func.h"
 #include "window_func.h"
@@ -267,6 +268,7 @@ protected:
 		StationFacilities facilities; ///< types of stations of interest
 		bool include_no_rating; ///< Whether we should include stations with no cargo rating.
 		CargoTypes cargoes; ///< bitmap of cargo types to include
+		bool attention_only; ///< Only selected cargo waiting with a rating below 50%.
 	};
 
 	static inline FilterState initial_state = {
@@ -274,6 +276,7 @@ protected:
 		{StationFacility::Train, StationFacility::TruckStop, StationFacility::BusStop, StationFacility::Airport, StationFacility::Dock},
 		true,
 		ALL_CARGOTYPES,
+		false,
 	};
 
 	/* Constants for sorting stations */
@@ -313,11 +316,22 @@ protected:
 		for (const Station *st : Station::Iterate()) {
 			if (this->filter.facilities.Any(st->facilities)) { // only stations with selected facilities
 				if (st->owner == owner || (st->owner == OWNER_NONE && HasStationInUse(st->index, true, owner))) {
-					bool has_rating = false;
-					/* Add to the station/cargo counts. */
+					/* Keep cargo choices available even when the attention filter hides their stations. */
 					for (CargoType cargo = 0; cargo < NUM_CARGO; ++cargo) {
 						if (st->goods[cargo].HasRating()) this->stations_per_cargo_type[cargo]++;
 					}
+					if (this->filter.attention_only) {
+						bool needs_attention = false;
+						for (CargoType cargo : SetCargoBitIterator(this->filter.cargoes)) {
+							const GoodsEntry &goods = st->goods[cargo];
+							if (CargoNeedsAttention(goods.HasRating(), goods.AvailableCount(), goods.rating)) {
+								needs_attention = true;
+								break;
+								}
+							}
+						if (!needs_attention) continue;
+					}
+					bool has_rating = false;
 					for (CargoType cargo = 0; cargo < NUM_CARGO; ++cargo) {
 						if (st->goods[cargo].HasRating()) {
 							has_rating = true;
@@ -441,6 +455,7 @@ public:
 		}
 
 		this->GetWidget<NWidgetCore>(WID_STL_SORTDROPBTN)->SetString(CompanyStationsWindow::sorter_names[this->stations.SortType()]);
+		this->SetWidgetLoweredState(WID_STL_ATTENTION, this->filter.attention_only);
 	}
 
 	~CompanyStationsWindow()
@@ -666,6 +681,13 @@ public:
 				this->filter_expanded = false;
 				ShowDropDownList(this, this->BuildCargoDropDownList(this->filter_expanded), -1, widget, 0, DropDownOption::Persist);
 				break;
+
+			case WID_STL_ATTENTION:
+				this->filter.attention_only = !this->filter.attention_only;
+				this->SetWidgetLoweredState(widget, this->filter.attention_only);
+				this->stations.ForceRebuild();
+				this->SetDirty();
+				break;
 		}
 	}
 
@@ -724,6 +746,7 @@ public:
 	void OnGameTick() override
 	{
 		if (this->stations.NeedResort()) {
+			if (this->filter.attention_only) this->stations.ForceRebuild();
 			Debug(misc, 3, "Periodic rebuild station list company {}", static_cast<int>(this->window_number));
 			this->SetDirty();
 		}
@@ -745,7 +768,11 @@ public:
 			/* This needs to be done in command-scope to enforce rebuilding before resorting invalid data */
 			this->stations.ForceRebuild();
 		} else {
-			this->stations.ForceResort();
+			if (this->filter.attention_only) {
+				this->stations.ForceRebuild();
+			} else {
+				this->stations.ForceResort();
+			}
 		}
 	}
 };
@@ -782,6 +809,7 @@ static constexpr std::initializer_list<NWidgetPart> _nested_company_stations_wid
 	NWidget(NWID_HORIZONTAL),
 		NWidget(WWT_PUSHTXTBTN, COLOUR_GREY, WID_STL_SORTBY), SetMinimalSize(81, 12), SetStringTip(STR_BUTTON_SORT_BY, STR_TOOLTIP_SORT_ORDER),
 		NWidget(WWT_DROPDOWN, COLOUR_GREY, WID_STL_SORTDROPBTN), SetMinimalSize(163, 12), SetStringTip(STR_SORT_BY_NAME, STR_TOOLTIP_SORT_CRITERIA), // widget_data gets overwritten.
+		NWidget(WWT_TEXTBTN, COLOUR_GREY, WID_STL_ATTENTION), SetStringTip(STR_STATION_LIST_ATTENTION, STR_STATION_LIST_ATTENTION_TOOLTIP), SetFill(0, 1),
 		NWidget(WWT_PANEL, COLOUR_GREY), SetResize(1, 0), SetFill(1, 1), EndContainer(),
 	EndContainer(),
 	NWidget(NWID_HORIZONTAL),
