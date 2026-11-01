@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "date": "2026-11-01",
+  "base": "f1fa0af2766d07820b15166179585b0ae4bbcd95",
+  "branch": "codex/temperate-art-refresh",
+  "fresh_import": {
+    "source": "Original checksum-pinned ZIP",
+    "model_states": 344,
+    "temporary_receipt_required": false
+  },
+  "clean_compilation": [
+    {
+      "path": "artifacts/atelier-future-heritage/game/future-heritage/future-heritage.grf",
+      "sha256": "0c437744d6a74b6ab1753650ae7224a325b0cfc95ba125a39333eec94e070846",
+      "matches_delivered_artifact": true
+    },
+    {
+      "path": "artifacts/atelier-temperate/game/temperate-world.grf",
+      "sha256": "f33432c6398ff9ca54ab9f4869bf6411e7e5e46c055523afc590308da5a7e5ec",
+      "matches_delivered_artifact": true
+    }
+  ],
+  "source_check": {
+    "scripts": 30,
+    "model_views": 1224,
+    "sprite_assignments": 1717,
+    "native_review_images": 11,
+    "delivered_artifacts_hashed": 14
+  },
+  "additional_checks": [
+    "Repository script-mode enforcement",
+    "Optional helper patch applies to main checkpoint",
+    "Staged whitespace and art-only file scope",
+    "Current review links resolve inside checkout",
+    "Generated helper patch avoids nested-diff parsing in the commit checker; exported JSON ends with newlines"
+  ],
+  "limits": [
+    "Clean compilation reused the reviewed Blender render inputs; no new Blender render run.",
+    "Native gameplay/performance evidence is from the delivered art checkpoint, not a combined regional/live-vehicle build.",
+    "Remote CI status is tracked by the pull request."
+  ]
+}

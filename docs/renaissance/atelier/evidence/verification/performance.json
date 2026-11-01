@@ -1,0 +1,82 @@
+[
+  {
+    "configuration": "before",
+    "zoom": 2,
+    "repeat": 0,
+    "exit_code": 0,
+    "wall_seconds": 58.075,
+    "peak_working_set_bytes": 96464896,
+    "metrics": "Console log output started to 'metrics.log'.\nBased on num. data points: 64 128 512\nGame loop rate: 37.02fps  (expected: 37.04fps)\nDrawing rate: 59.98fps  (expected: 33.33fps)\nVideo output rate: 59.98fps  (expected: 60.00fps)\nGame loop times: 0.05ms  0.05ms  0.03ms\n  GL station ticks times: 0.00ms  0.00ms  0.00ms\n  GL train ticks times: 0.01ms  0.01ms  0.01ms\n  GL road vehicle ticks times: 0.01ms  0.00ms  0.00ms\n  GL ship ticks times: 0.01ms  0.01ms  0.00ms\n  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms\n  GL landscape ticks times: 0.01ms  0.01ms  0.01ms\nDrawing times: 0.09ms  0.11ms  0.10ms\n  Viewport drawing times: 0.06ms  0.07ms  0.08ms\nVideo output times: 0.50ms  0.45ms  0.37ms\nSound mixing times: 0.00ms  0.00ms  0.00ms\nAI/GS scripts total times: 0.00ms  0.01ms  0.00ms\nGame script times: 0.00ms  0.00ms  0.00ms\nConsole log file closed.\n",
+    "distinct_tiles_per_powered_vehicle": {
+      "14": 8,
+      "11": 8,
+      "10": 11,
+      "9": 11,
+      "8": 11,
+      "7": 11,
+      "6": 11,
+      "3": 8,
+      "0": 9
+    }
+  },
+  {
+    "configuration": "before",
+    "zoom": 0,
+    "repeat": 0,
+    "exit_code": 0,
+    "wall_seconds": 57.904,
+    "peak_working_set_bytes": 89083904,
+    "metrics": "Console log output started to 'metrics.log'.\nBased on num. data points: 64 128 512\nGame loop rate: 37.06fps  (expected: 37.04fps)\nDrawing rate: 59.96fps  (expected: 33.33fps)\nVideo output rate: 59.95fps  (expected: 60.00fps)\nGame loop times: 0.04ms  0.05ms  0.03ms\n  GL station ticks times: 0.00ms  0.00ms  0.00ms\n  GL train ticks times: 0.01ms  0.01ms  0.01ms\n  GL road vehicle ticks times: 0.00ms  0.00ms  0.00ms\n  GL ship ticks times: 0.01ms  0.01ms  0.00ms\n  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms\n  GL landscape ticks times: 0.01ms  0.01ms  0.01ms\nDrawing times: 0.05ms  0.05ms  0.04ms\n  Viewport drawing times: 0.02ms  0.02ms  0.02ms\nVideo output times: 0.16ms  0.20ms  0.20ms\nSound mixing times: 0.00ms  0.00ms  0.00ms\nAI/GS scripts total times: 0.00ms  0.00ms  0.00ms\nGame script times: 0.00ms  0.00ms  0.00ms\nConsole log file closed.\n",
+    "distinct_tiles_per_powered_vehicle": {
+      "14": 8,
+      "11": 8,
+      "10": 11,
+      "9": 11,
+      "8": 11,
+      "7": 11,
+      "6": 11,
+      "3": 8,
+      "0": 9
+    }
+  },
+  {
+    "configuration": "after",
+    "zoom": 2,
+    "repeat": 0,
+    "exit_code": 0,
+    "wall_seconds": 58.123,
+    "peak_working_set_bytes": 98394112,
+    "metrics": "Console log output started to 'metrics.log'.\nBased on num. data points: 64 128 512\nGame loop rate: 37.02fps  (expected: 37.04fps)\nDrawing rate: 59.97fps  (expected: 33.33fps)\nVideo output rate: 59.97fps  (expected: 60.00fps)\nGame loop times: 0.04ms  0.03ms  0.03ms\n  GL station ticks times: 0.00ms  0.00ms  0.00ms\n  GL train ticks times: 0.01ms  0.01ms  0.01ms\n  GL road vehicle ticks times: 0.00ms  0.00ms  0.00ms\n  GL ship ticks times: 0.01ms  0.01ms  0.00ms\n  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms\n  GL landscape ticks times: 0.01ms  0.01ms  0.01ms\nDrawing times: 0.07ms  0.08ms  0.09ms\n  Viewport drawing times: 0.05ms  0.05ms  0.07ms\nVideo output times: 0.35ms  0.34ms  0.35ms\nSound mixing times: 0.00ms  0.00ms  0.00ms\nAI/GS scripts total times: 0.00ms  0.00ms  0.00ms\nGame script times: 0.00ms  0.00ms  0.00ms\nConsole log file closed.\n",
+    "distinct_tiles_per_powered_vehicle": {
+      "14": 8,
+      "11": 8,
+      "10": 11,
+      "9": 11,
+      "8": 11,
+      "7": 11,
+      "6": 11,
+      "3": 8,
+      "0": 9
+    }
+  },
+  {
+    "configuration": "after",
+    "zoom": 0,
+    "repeat": 0,
+    "exit_code": 0,
+    "wall_seconds": 57.922,
+    "peak_working_set_bytes": 89333760,
+    "metrics": "Console log output started to 'metrics.log'.\nBased on num. data points: 64 128 512\nGame loop rate: 37.05fps  (expected: 37.04fps)\nDrawing rate: 60.09fps  (expected: 33.33fps)\nVideo output rate: 60.09fps  (expected: 60.00fps)\nGame loop times: 0.04ms  0.04ms  0.03ms\n  GL station ticks times: 0.00ms  0.00ms  0.00ms\n  GL train ticks times: 0.01ms  0.01ms  0.00ms\n  GL road vehicle ticks times: 0.00ms  0.00ms  0.00ms\n  GL ship ticks times: 0.01ms  0.01ms  0.00ms\n  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms\n  GL landscape ticks times: 0.01ms  0.01ms  0.01ms\nDrawing times: 0.04ms  0.04ms  0.03ms\n  Viewport drawing times: 0.02ms  0.02ms  0.02ms\nVideo output times: 0.21ms  0.21ms  0.19ms\nSound mixing times: 0.00ms  0.00ms  0.00ms\nAI/GS scripts total times: 0.00ms  0.00ms  0.00ms\nGame script times: 0.00ms  0.00ms  0.00ms\nConsole log file closed.\n",
+    "distinct_tiles_per_powered_vehicle": {
+      "14": 8,
+      "11": 8,
+      "10": 11,
+      "9": 11,
+      "8": 11,
+      "7": 11,
+      "6": 11,
+      "3": 8,
+      "0": 9
+    }
+  }
+]

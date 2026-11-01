@@ -1,0 +1,21 @@
+name: Atelier source and review
+
+on:
+  pull_request:
+    paths:
+      - 'tools/renaissance/**'
+      - 'media/renaissance/atelier-demo/**'
+      - 'docs/renaissance/atelier/**'
+      - 'src/table/**'
+      - '.github/workflows/atelier-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check source assignments and committed review evidence
+        run: python3 tools/renaissance/check_atelier_review.py

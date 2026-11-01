@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "scope": "Delivered local art checkpoint, 2026-11-01; large generated and supplied files remain outside Git.",
+  "source_base": "f1fa0af2766d07820b15166179585b0ae4bbcd95",
+  "artifacts": [
+    {
+      "path": "artifacts/atelier-temperate/game/temperate-world.grf",
+      "bytes": 55768148,
+      "sha256": "f33432c6398ff9ca54ab9f4869bf6411e7e5e46c055523afc590308da5a7e5ec"
+    },
+    {
+      "path": "artifacts/atelier-temperate/source/temperate-infrastructure.blend",
+      "bytes": 76435230,
+      "sha256": "bde84e7e71e5905ef3b84741f826e05d0da3e47b0f01d9f08fe52bbb2b489d3d"
+    },
+    {
+      "path": "artifacts/atelier-temperate/world/source/temperate-world.blend",
+      "bytes": 78385479,
+      "sha256": "d4efca4d43c280eea1a86f4ea74f0b3d821dddd71e2055b51583ae42dd174304"
+    },
+    {
+      "path": "artifacts/atelier-temperate/details/source/temperate-details.blend",
+      "bytes": 37971189,
+      "sha256": "468d9b1f7b4a41ed35d7c1e4909c1aad5df996b9b4e659a7dc5c5afb5f53d87d"
+    },
+    {
+      "path": "artifacts/atelier-temperate/runtime/save/atelier-demo.sav",
+      "bytes": 16932,
+      "sha256": "c3c3c0c2cc350530345c2385048785c837cb82a8e6551e199eaa68909375d320"
+    },
+    {
+      "path": "artifacts/atelier-r2/game/renaissance-atelier.grf",
+      "bytes": 8912956,
+      "sha256": "323704f685afe33bcac7eeef909374419c9e7c290e91e885188693f05f2c9bef"
+    },
+    {
+      "path": "artifacts/atelier-r2/source/atelier-library.blend",
+      "bytes": 27692512,
+      "sha256": "314d8c692573100512b3c1506c41cb9df6ec6aa2ec3da0f1c3f1ff713e35cb1c"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/game/future-heritage/future-heritage.grf",
+      "bytes": 48237595,
+      "sha256": "0c437744d6a74b6ab1753650ae7224a325b0cfc95ba125a39333eec94e070846"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/imports/TTD_Future_Heritage_Full_Fleet.zip",
+      "bytes": 118706851,
+      "sha256": "a17e1ced56f29bac2fbced04f99ca09b1f6ae9c47cb5db3b2ac888f5d9dcee91"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/source/blender/train.blend",
+      "bytes": 42812225,
+      "sha256": "904c84e9cd45132b29d254affc71cc7b4a5ce6c4d3df43cdaa98bbef3abca5db"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/source/blender/carriage.blend",
+      "bytes": 70215868,
+      "sha256": "aba0960022c2aa2ef84cef8947c754dd6f119b759c9afc3cae1b3911c51c3cea"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/source/blender/road.blend",
+      "bytes": 101047746,
+      "sha256": "ba2fe432e17b1d360500fb0d896a7147cc8cace2710303b216ca8ea81a018715"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/source/blender/ship.blend",
+      "bytes": 8567703,
+      "sha256": "38df4727d0a3dfab395d69eaca3d0433276a8d0610cfb3d8e127492edc734ef6"
+    },
+    {
+      "path": "artifacts/atelier-future-heritage/source/blender/aircraft.blend",
+      "bytes": 67616362,
+      "sha256": "8701f855b812f9b484b44a88e68c3a9d0388449b8b5cebffa54b99c96f1aba1d"
+    }
+  ]
+}

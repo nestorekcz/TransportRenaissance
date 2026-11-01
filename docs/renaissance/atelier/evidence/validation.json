@@ -1,0 +1,55 @@
+{
+  "result": "PASS",
+  "scope": "Temperate world production pass, approved houses and full Future Heritage fleet retained",
+  "new_model_view_collections": 1224,
+  "new_logical_sprite_slots": 1717,
+  "colour_zoom_alternatives": 6868,
+  "source_libraries": [
+    {
+      "file": "temperate-infrastructure.blend",
+      "collections": 364,
+      "objects": 13274,
+      "triangles": 158724,
+      "missing_external_files": [],
+      "empty_collections": []
+    },
+    {
+      "file": "temperate-world.blend",
+      "collections": 437,
+      "objects": 13260,
+      "triangles": 210716,
+      "missing_external_files": [],
+      "empty_collections": []
+    },
+    {
+      "file": "temperate-details.blend",
+      "collections": 423,
+      "objects": 6142,
+      "triangles": 103682,
+      "missing_external_files": [],
+      "empty_collections": []
+    }
+  ],
+  "render_bounds_checked": 1224,
+  "native_fleet": {
+    "engines": 256,
+    "resolved_directions": 2048,
+    "differences_from_approved_fleet": []
+  },
+  "traffic_powered_vehicles": 9,
+  "native_capture_count": 20,
+  "save_roundtrip": true,
+  "engine_binary_unchanged": true,
+  "approved_house_pack_unchanged": true,
+  "approved_fleet_pack_unchanged": true,
+  "runtime_grf_sha256": "f33432c6398ff9ca54ab9f4869bf6411e7e5e46c055523afc590308da5a7e5ec",
+  "inventory_source_slots_reviewed": 10806,
+  "limitations": [
+    "Native runtime uses baked 2D sprites from editable 3D sources.",
+    "Art-only replacement; no changes to vehicle, pathfinding, economy or save schemas.",
+    "Other climates are deferred by user instruction.",
+    "Native visual checks cover representative scenes; each possible bridge length, terrain combination and vehicle direction is not separately photographed.",
+    "Technical waterway/catenary overlays, disaster art and small effects are explicitly retained in the audit.",
+    "Performance figures describe this 128 x 128 review fixture with nine powered vehicles, not a dense-city stress test."
+  ]
+}

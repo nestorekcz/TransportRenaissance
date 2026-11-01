@@ -1,0 +1,10 @@
+{
+  "archive": "TTD_Future_Heritage_Full_Fleet.zip",
+  "bytes": 118706851,
+  "files": 1882,
+  "sha256": "a17e1ced56f29bac2fbced04f99ca09b1f6ae9c47cb5db3b2ac888f5d9dcee91",
+  "base_models": 256,
+  "empty_variants": 88,
+  "source": "User-supplied full fleet archive; preserve its original notices and licences.",
+  "distribution": "External input, not downloaded automatically or stored in Git. Pass its location with --archive."
+}

@@ -1,0 +1,5 @@
+{
+  "measured_world_pack_sha256": "1ab700104960198368fa63bf7164b92d95eb538cf08c34b89dd1b5f62c7b1eec",
+  "delivered_world_pack_sha256": "f33432c6398ff9ca54ab9f4869bf6411e7e5e46c055523afc590308da5a7e5ec",
+  "post_measurement_change": "Added sprite 693 as an alias of the already-baked buoy model; no new textures, source geometry or gameplay changes. Final alias pack was loaded and save-roundtripped, and affected screenshots refreshed."
+}

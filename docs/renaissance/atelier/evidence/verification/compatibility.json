@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 2.054,
+  "peak_working_set_bytes": 87674880,
+  "metrics": "",
+  "distinct_tiles_per_powered_vehicle": {},
+  "stock_save_written": true,
+  "fork_reload": {
+    "exit_code": 0,
+    "wall_seconds": 2.324,
+    "peak_working_set_bytes": 94699520,
+    "metrics": "",
+    "distinct_tiles_per_powered_vehicle": {}
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "reviewed_source_raster_slots": 10806,
+  "source_slot_status_counts": {
+    "interface-preserved": 2390,
+    "temperate-replacement": 2159,
+    "functional-detail-retained": 1434,
+    "approved-art-preserved": 285,
+    "other-climate-or-unused-native-slot": 559,
+    "other-climate-deferred": 2963,
+    "fleet-integrated": 1011,
+    "meadow-art-preserved": 5
+  },
+  "new_compiled_logical_slots": 1717,
+  "model_view_jobs": 1224,
+  "new_categories": {
+    "depots": 30,
+    "road-stops": 40,
+    "roads": 32,
+    "rails": 84,
+    "street-details": 8,
+    "bridges": 236,
+    "tunnels": 32,
+    "town-buildings": 73,
+    "town-ground": 42,
+    "industries": 136,
+    "airports": 75,
+    "trees": 112,
+    "signals": 256,
+    "landscape": 36,
+    "civic-details": 33,
+    "water-transport": 8,
+    "stations": 4,
+    "station-and-road-variants": 40,
+    "farmland": 171,
+    "foundations": 251,
+    "shorelines": 18
+  },
+  "retained_detail_examples": [
+    "Catenary wires and electrical contact overlays",
+    "Canal/river/lock technical edge layers and aqueducts",
+    "Disaster vehicles, sparks, explosions and legacy lift animation",
+    "UI thumbnails, icons, portraits and construction cursors"
+  ],
+  "note": "Physical source-slot counts include repeated conditional climate/traffic-side alternatives. They must not be added to logical replacement counts. Other climates are deferred by user instruction; retained details are explicitly recorded, not claimed as new models."
+}
