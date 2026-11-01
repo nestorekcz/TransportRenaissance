@@ -1,0 +1,931 @@
+{
+  "version": 1,
+  "input_sha256": "59cad32a68a11a6b1b5d08926aa2f90698be50febcb32c24f172ef9cce4a72ba",
+  "coverage": [
+    {
+      "sprite": 3924,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 0
+    },
+    {
+      "sprite": 3925,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 1
+    },
+    {
+      "sprite": 3926,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 2
+    },
+    {
+      "sprite": 3927,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 3
+    },
+    {
+      "sprite": 3928,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 4
+    },
+    {
+      "sprite": 3929,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 5
+    },
+    {
+      "sprite": 3930,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 6
+    },
+    {
+      "sprite": 3931,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 7
+    },
+    {
+      "sprite": 3932,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 8
+    },
+    {
+      "sprite": 3933,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 9
+    },
+    {
+      "sprite": 3934,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 10
+    },
+    {
+      "sprite": 3935,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 11
+    },
+    {
+      "sprite": 3936,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 12
+    },
+    {
+      "sprite": 3937,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 13
+    },
+    {
+      "sprite": 3938,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 14
+    },
+    {
+      "sprite": 3939,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 15
+    },
+    {
+      "sprite": 3940,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 16
+    },
+    {
+      "sprite": 3941,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 17
+    },
+    {
+      "sprite": 3942,
+      "category": "temperate regrowth",
+      "stage": 0,
+      "slope": 18
+    },
+    {
+      "sprite": 3943,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 0
+    },
+    {
+      "sprite": 3944,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 1
+    },
+    {
+      "sprite": 3945,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 2
+    },
+    {
+      "sprite": 3946,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 3
+    },
+    {
+      "sprite": 3947,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 4
+    },
+    {
+      "sprite": 3948,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 5
+    },
+    {
+      "sprite": 3949,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 6
+    },
+    {
+      "sprite": 3950,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 7
+    },
+    {
+      "sprite": 3951,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 8
+    },
+    {
+      "sprite": 3952,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 9
+    },
+    {
+      "sprite": 3953,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 10
+    },
+    {
+      "sprite": 3954,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 11
+    },
+    {
+      "sprite": 3955,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 12
+    },
+    {
+      "sprite": 3956,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 13
+    },
+    {
+      "sprite": 3957,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 14
+    },
+    {
+      "sprite": 3958,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 15
+    },
+    {
+      "sprite": 3959,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 16
+    },
+    {
+      "sprite": 3960,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 17
+    },
+    {
+      "sprite": 3961,
+      "category": "temperate regrowth",
+      "stage": 1,
+      "slope": 18
+    },
+    {
+      "sprite": 3962,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 0
+    },
+    {
+      "sprite": 3963,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 1
+    },
+    {
+      "sprite": 3964,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 2
+    },
+    {
+      "sprite": 3965,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 3
+    },
+    {
+      "sprite": 3966,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 4
+    },
+    {
+      "sprite": 3967,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 5
+    },
+    {
+      "sprite": 3968,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 6
+    },
+    {
+      "sprite": 3969,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 7
+    },
+    {
+      "sprite": 3970,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 8
+    },
+    {
+      "sprite": 3971,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 9
+    },
+    {
+      "sprite": 3972,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 10
+    },
+    {
+      "sprite": 3973,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 11
+    },
+    {
+      "sprite": 3974,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 12
+    },
+    {
+      "sprite": 3975,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 13
+    },
+    {
+      "sprite": 3976,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 14
+    },
+    {
+      "sprite": 3977,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 15
+    },
+    {
+      "sprite": 3978,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 16
+    },
+    {
+      "sprite": 3979,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 17
+    },
+    {
+      "sprite": 3980,
+      "category": "temperate regrowth",
+      "stage": 2,
+      "slope": 18
+    },
+    {
+      "sprite": 3981,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 0
+    },
+    {
+      "sprite": 3982,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 1
+    },
+    {
+      "sprite": 3983,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 2
+    },
+    {
+      "sprite": 3984,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 3
+    },
+    {
+      "sprite": 3985,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 4
+    },
+    {
+      "sprite": 3986,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 5
+    },
+    {
+      "sprite": 3987,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 6
+    },
+    {
+      "sprite": 3988,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 7
+    },
+    {
+      "sprite": 3989,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 8
+    },
+    {
+      "sprite": 3990,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 9
+    },
+    {
+      "sprite": 3991,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 10
+    },
+    {
+      "sprite": 3992,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 11
+    },
+    {
+      "sprite": 3993,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 12
+    },
+    {
+      "sprite": 3994,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 13
+    },
+    {
+      "sprite": 3995,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 14
+    },
+    {
+      "sprite": 3996,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 15
+    },
+    {
+      "sprite": 3997,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 16
+    },
+    {
+      "sprite": 3998,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 17
+    },
+    {
+      "sprite": 3999,
+      "category": "temperate regrowth",
+      "stage": 3,
+      "slope": 18
+    },
+    {
+      "sprite": 1011,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1012,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1013,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1014,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1015,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1016,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1017,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1018,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1019,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1020,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1021,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1022,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1023,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1024,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1025,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1026,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1027,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1028,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1029,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1030,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1031,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1032,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1033,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1034,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1035,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1036,
+      "category": "rail ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1332,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1333,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1334,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1335,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1336,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1337,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1338,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1339,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1340,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1341,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1342,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1343,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1344,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1345,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1346,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1347,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1348,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1349,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 1350,
+      "category": "road ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4000,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4001,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4002,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4003,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4004,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4005,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4006,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4007,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4008,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4009,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4010,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4011,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4012,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4013,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4014,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4015,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4016,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4017,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4018,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4019,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4020,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4021,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4022,
+      "category": "rough ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4023,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4024,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4025,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4026,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4027,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4028,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4029,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4030,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4031,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4032,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4033,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4034,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4035,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4036,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4037,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4038,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4039,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4040,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 4041,
+      "category": "rocky ground",
+      "inherited_structure": true
+    },
+    {
+      "sprite": 3079,
+      "category": "steam",
+      "frame": 0
+    },
+    {
+      "sprite": 3080,
+      "category": "steam",
+      "frame": 1
+    },
+    {
+      "sprite": 3081,
+      "category": "steam",
+      "frame": 2
+    },
+    {
+      "sprite": 3082,
+      "category": "steam",
+      "frame": 3
+    },
+    {
+      "sprite": 3083,
+      "category": "steam",
+      "frame": 4
+    }
+  ],
+  "sprite_count": 168,
+  "sha256": "490585bdf9c3de8e4a21774398d23d8907758b672d6d5faad3b132a5266ddec8",
+  "bytes": 10046587,
+  "zoom_scales": [
+    1,
+    2,
+    4
+  ],
+  "static_grf": true
+}

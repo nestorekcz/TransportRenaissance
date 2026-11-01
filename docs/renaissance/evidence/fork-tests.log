@@ -1,0 +1,202 @@
+Internal ctest changing into directory: <workspace>/artifacts/fork-build
+Test project <workspace>/artifacts/fork-build
+      Start  1: Utf8View - empty
+ 1/98 Test  #1: Utf8View - empty ................................................................................................................   Passed    0.10 sec
+      Start  2: Utf8View - invalid
+ 2/98 Test  #2: Utf8View - invalid ..............................................................................................................   Passed    0.09 sec
+      Start  3: Utf8View - iterate
+ 3/98 Test  #3: Utf8View - iterate ..............................................................................................................   Passed    0.09 sec
+      Start  4: SpiralTileSequence - minimum
+ 4/98 Test  #4: SpiralTileSequence - minimum ....................................................................................................   Passed    0.11 sec
+      Start  5: SpiralTileSequence - odd
+ 5/98 Test  #5: SpiralTileSequence - odd ........................................................................................................   Passed    0.09 sec
+      Start  6: SpiralTileSequence - even
+ 6/98 Test  #6: SpiralTileSequence - even .......................................................................................................   Passed    0.11 sec
+      Start  7: SpiralTileSequence - zero hole
+ 7/98 Test  #7: SpiralTileSequence - zero hole ..................................................................................................   Passed    0.09 sec
+      Start  8: SpiralTileSequence - normal hole
+ 8/98 Test  #8: SpiralTileSequence - normal hole ................................................................................................   Passed    0.09 sec
+      Start  9: WindowDesc - ini_key uniqueness
+ 9/98 Test  #9: WindowDesc - ini_key uniqueness .................................................................................................   Passed    0.09 sec
+      Start 10: WindowDesc - ini_key validity
+10/98 Test #10: WindowDesc - ini_key validity ...................................................................................................   Passed    0.12 sec
+      Start 11: WindowDesc - NWidgetParts properly closed
+11/98 Test #11: WindowDesc - NWidgetParts properly closed .......................................................................................   Passed    0.09 sec
+      Start 12: WindowDesc - NWidgetPart validity
+12/98 Test #12: WindowDesc - NWidgetPart validity ...............................................................................................   Passed    0.12 sec
+      Start 13: Squirrel -> JSON conversion
+13/98 Test #13: Squirrel -> JSON conversion .....................................................................................................   Passed    0.11 sec
+      Start 14: JSON -> Squirrel conversion
+14/98 Test #14: JSON -> Squirrel conversion .....................................................................................................   Passed    0.09 sec
+      Start 15: Authentication_KeyExchangeOnly
+15/98 Test #15: Authentication_KeyExchangeOnly ..................................................................................................   Passed    0.09 sec
+      Start 16: Authentication_PAKE
+16/98 Test #16: Authentication_PAKE .............................................................................................................   Passed    0.09 sec
+      Start 17: Authentication_AuthorizedKey
+17/98 Test #17: Authentication_AuthorizedKey ....................................................................................................   Passed    0.09 sec
+      Start 18: Authentication_Combined
+18/98 Test #18: Authentication_Combined .........................................................................................................   Passed    0.09 sec
+      Start 19: Encryption handling
+19/98 Test #19: Encryption handling .............................................................................................................   Passed    0.09 sec
+      Start 20: StrCompareIgnoreCase - std::string
+20/98 Test #20: StrCompareIgnoreCase - std::string ..............................................................................................   Passed    0.09 sec
+      Start 21: StrCompareIgnoreCase - std::string_view
+21/98 Test #21: StrCompareIgnoreCase - std::string_view .........................................................................................   Passed    0.09 sec
+      Start 22: StrEqualsIgnoreCase - std::string
+22/98 Test #22: StrEqualsIgnoreCase - std::string ...............................................................................................   Passed    0.09 sec
+      Start 23: StrEqualsIgnoreCase - std::string_view
+23/98 Test #23: StrEqualsIgnoreCase - std::string_view ..........................................................................................   Passed    0.09 sec
+      Start 24: StrStartsWithIgnoreCase - std::string
+24/98 Test #24: StrStartsWithIgnoreCase - std::string ...........................................................................................   Passed    0.12 sec
+      Start 25: StrStartsWithIgnoreCase - std::string_view
+25/98 Test #25: StrStartsWithIgnoreCase - std::string_view ......................................................................................   Passed    0.09 sec
+      Start 26: StrEndsWithIgnoreCase - std::string
+26/98 Test #26: StrEndsWithIgnoreCase - std::string .............................................................................................   Passed    0.09 sec
+      Start 27: StrEndsWithIgnoreCase - std::string_view
+27/98 Test #27: StrEndsWithIgnoreCase - std::string_view ........................................................................................   Passed    0.09 sec
+      Start 28: FormatArrayAsHex
+28/98 Test #28: FormatArrayAsHex ................................................................................................................   Passed    0.09 sec
+      Start 29: ConvertHexToBytes
+29/98 Test #29: ConvertHexToBytes ...............................................................................................................   Passed    0.09 sec
+      Start 30: StrTrimInPlace
+30/98 Test #30: StrTrimInPlace ..................................................................................................................   Passed    0.09 sec
+      Start 31: StrTrimView
+31/98 Test #31: StrTrimView .....................................................................................................................   Passed    0.09 sec
+      Start 32: FixSCCEncoded
+32/98 Test #32: FixSCCEncoded ...................................................................................................................   Passed    0.09 sec
+      Start 33: FixSCCEncodedNegative
+33/98 Test #33: FixSCCEncodedNegative ...........................................................................................................   Passed    0.09 sec
+      Start 34: EncodedString::ReplaceParam - positive
+34/98 Test #34: EncodedString::ReplaceParam - positive ..........................................................................................   Passed    0.09 sec
+      Start 35: EncodedString::ReplaceParam - negative
+35/98 Test #35: EncodedString::ReplaceParam - negative ..........................................................................................   Passed    0.09 sec
+      Start 36: InPlaceReplacement
+36/98 Test #36: InPlaceReplacement ..............................................................................................................   Passed    0.09 sec
+      Start 37: StringConsumer - basic
+37/98 Test #37: StringConsumer - basic ..........................................................................................................   Passed    0.09 sec
+      Start 38: StringConsumer - binary8
+38/98 Test #38: StringConsumer - binary8 ........................................................................................................   Passed    0.09 sec
+      Start 39: StringConsumer - binary16
+39/98 Test #39: StringConsumer - binary16 .......................................................................................................   Passed    0.09 sec
+      Start 40: StringConsumer - binary32
+40/98 Test #40: StringConsumer - binary32 .......................................................................................................   Passed    0.09 sec
+      Start 41: StringConsumer - binary64
+41/98 Test #41: StringConsumer - binary64 .......................................................................................................   Passed    0.09 sec
+      Start 42: StringConsumer - utf8
+42/98 Test #42: StringConsumer - utf8 ...........................................................................................................   Passed    0.09 sec
+      Start 43: StringConsumer - conditions
+43/98 Test #43: StringConsumer - conditions .....................................................................................................   Passed    0.12 sec
+      Start 44: StringConsumer - ascii
+44/98 Test #44: StringConsumer - ascii ..........................................................................................................   Passed    0.09 sec
+      Start 45: StringConsumer - parse int
+45/98 Test #45: StringConsumer - parse int ......................................................................................................   Passed    0.09 sec
+      Start 46: StringConsumer - invalid int
+46/98 Test #46: StringConsumer - invalid int ....................................................................................................   Passed    0.09 sec
+      Start 47: StringConsumer - most negative
+47/98 Test #47: StringConsumer - most negative ..................................................................................................   Passed    0.09 sec
+      Start 48: StringBuilder - basic
+48/98 Test #48: StringBuilder - basic ...........................................................................................................   Passed    0.09 sec
+      Start 49: StringBuilder - binary
+49/98 Test #49: StringBuilder - binary ..........................................................................................................   Passed    0.09 sec
+      Start 50: StringBuilder - text
+50/98 Test #50: StringBuilder - text ............................................................................................................   Passed    0.09 sec
+      Start 51: Station attention requires waiting cargo and a rating below 50 percent
+51/98 Test #51: Station attention requires waiting cargo and a rating below 50 percent ..........................................................   Passed    0.09 sec
+      Start 52: Water interpolation wraps and preserves palette phase and alpha
+52/98 Test #52: Water interpolation wraps and preserves palette phase and alpha .................................................................   Passed    0.09 sec
+      Start 53: DivideApproxTest - Negative
+53/98 Test #53: DivideApproxTest - Negative .....................................................................................................   Passed    0.09 sec
+      Start 54: DivideApproxTest, Divide
+54/98 Test #54: DivideApproxTest, Divide ........................................................................................................   Passed    0.09 sec
+      Start 55: IntSqrtTest - Zero
+55/98 Test #55: IntSqrtTest - Zero ..............................................................................................................   Passed    0.09 sec
+      Start 56: IntSqrtTest - FindSqRt
+56/98 Test #56: IntSqrtTest - FindSqRt ..........................................................................................................   Passed    0.09 sec
+      Start 57: ClampTo
+57/98 Test #57: ClampTo .........................................................................................................................   Passed    0.09 sec
+      Start 58: SoftClamp
+58/98 Test #58: SoftClamp .......................................................................................................................   Passed    0.12 sec
+      Start 59: PartialPixelSlopeAdditionTest - A one corner slope, plus the opposite three corner slope results in a flat but elevated slope
+59/98 Test #59: PartialPixelSlopeAdditionTest - A one corner slope, plus the opposite three corner slope results in a flat but elevated slope ...   Passed    0.09 sec
+      Start 60: PartialPixelSlopeAdditionTest - Diagonal slopes with their opposite slope result in a flat but elevated slope
+60/98 Test #60: PartialPixelSlopeAdditionTest - Diagonal slopes with their opposite slope result in a flat but elevated slope ...................   Passed    0.09 sec
+      Start 61: PartialPixelSlopeAdditionTest - Half tile slopes with their opposite half tile slope result in a flat but elevated slope
+61/98 Test #61: PartialPixelSlopeAdditionTest - Half tile slopes with their opposite half tile slope result in a flat but elevated slope ........   Passed    0.09 sec
+      Start 62: PartialPixelSlopeAdditionTest - Two opposite one corner slopes result in the two corner slope with opposite corners
+62/98 Test #62: PartialPixelSlopeAdditionTest - Two opposite one corner slopes result in the two corner slope with opposite corners .............   Passed    0.09 sec
+      Start 63: PartialPixelSlopeAdditionTest - A steep slope is a one corner slope on top of a three corner slope
+63/98 Test #63: PartialPixelSlopeAdditionTest - A steep slope is a one corner slope on top of a three corner slope ..............................   Passed    0.09 sec
+      Start 64: PartialPixelSlopeAdditionTest - A half tile steep slope is a one corner half tile on top of a three corner slope
+64/98 Test #64: PartialPixelSlopeAdditionTest - A half tile steep slope is a one corner half tile on top of a three corner slope ................   Passed    0.09 sec
+      Start 65: PartialPixelTest - One corner up slopes - SLOPE_N
+65/98 Test #65: PartialPixelTest - One corner up slopes - SLOPE_N ...............................................................................   Passed    0.09 sec
+      Start 66: PartialPixelTest - One corner up slopes - SLOPE_E
+66/98 Test #66: PartialPixelTest - One corner up slopes - SLOPE_E ...............................................................................   Passed    0.09 sec
+      Start 67: PartialPixelTest - One corner up slopes - SLOPE_S
+67/98 Test #67: PartialPixelTest - One corner up slopes - SLOPE_S ...............................................................................   Passed    0.09 sec
+      Start 68: PartialPixelTest - One corner up slopes - SLOPE_W
+68/98 Test #68: PartialPixelTest - One corner up slopes - SLOPE_W ...............................................................................   Passed    0.09 sec
+      Start 69: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NE
+69/98 Test #69: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NE ....................................................................   Passed    0.09 sec
+      Start 70: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SE
+70/98 Test #70: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SE ....................................................................   Passed    0.09 sec
+      Start 71: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SW
+71/98 Test #71: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_SW ....................................................................   Passed    0.09 sec
+      Start 72: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NW
+72/98 Test #72: PartialPixelTest - Two corner up, diagonal slopes - SLOPE_NW ....................................................................   Passed    0.09 sec
+      Start 73: PartialPixelTest - Two opposite corner up slopes - SLOPE_NS
+73/98 Test #73: PartialPixelTest - Two opposite corner up slopes - SLOPE_NS .....................................................................   Passed    0.09 sec
+      Start 74: PartialPixelTest - Two opposite corner up slopes - SLOPE_EW
+74/98 Test #74: PartialPixelTest - Two opposite corner up slopes - SLOPE_EW .....................................................................   Passed    0.09 sec
+      Start 75: PartialPixelTest - Three corner up slopes - SLOPE_ENW
+75/98 Test #75: PartialPixelTest - Three corner up slopes - SLOPE_ENW ...........................................................................   Passed    0.09 sec
+      Start 76: PartialPixelTest - Three corner up slopes - SLOPE_SEN
+76/98 Test #76: PartialPixelTest - Three corner up slopes - SLOPE_SEN ...........................................................................   Passed    0.09 sec
+      Start 77: PartialPixelTest - Three corner up slopes - SLOPE_WSE
+77/98 Test #77: PartialPixelTest - Three corner up slopes - SLOPE_WSE ...........................................................................   Passed    0.09 sec
+      Start 78: PartialPixelTest - Three corner up slopes - SLOPE_NWS
+78/98 Test #78: PartialPixelTest - Three corner up slopes - SLOPE_NWS ...........................................................................   Passed    0.09 sec
+      Start 79: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_N
+79/98 Test #79: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_N .....................................................................   Passed    0.09 sec
+      Start 80: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_E
+80/98 Test #80: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_E .....................................................................   Passed    0.09 sec
+      Start 81: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_S
+81/98 Test #81: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_S .....................................................................   Passed    0.09 sec
+      Start 82: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_W
+82/98 Test #82: PartialPixelTest - Normal half tile slopes - SLOPE/CORNER_W .....................................................................   Passed    0.09 sec
+      Start 83: PartialPixelTest - Steep slopes - SLOPE_STEEP_N
+83/98 Test #83: PartialPixelTest - Steep slopes - SLOPE_STEEP_N .................................................................................   Passed    0.09 sec
+      Start 84: PartialPixelTest - Steep slopes - SLOPE_STEEP_E
+84/98 Test #84: PartialPixelTest - Steep slopes - SLOPE_STEEP_E .................................................................................   Passed    0.09 sec
+      Start 85: PartialPixelTest - Steep slopes - SLOPE_STEEP_S
+85/98 Test #85: PartialPixelTest - Steep slopes - SLOPE_STEEP_S .................................................................................   Passed    0.09 sec
+      Start 86: PartialPixelTest - Steep slopes - SLOPE_STEEP_W
+86/98 Test #86: PartialPixelTest - Steep slopes - SLOPE_STEEP_W .................................................................................   Passed    0.09 sec
+      Start 87: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_N
+87/98 Test #87: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_N ......................................................   Passed    0.09 sec
+      Start 88: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_E
+88/98 Test #88: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_E ......................................................   Passed    0.09 sec
+      Start 89: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_S
+89/98 Test #89: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_S ......................................................   Passed    0.09 sec
+      Start 90: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_W
+90/98 Test #90: PartialPixelTest - Half tile on top of steep slopes - SLOPE_STEEP/CORNER_W ......................................................   Passed    0.09 sec
+      Start 91: History Rotation and Reporting tests
+91/98 Test #91: History Rotation and Reporting tests ............................................................................................   Passed    0.09 sec
+      Start 92: FlatSet - basic
+92/98 Test #92: FlatSet - basic .................................................................................................................   Passed    0.09 sec
+      Start 93: EnumOverOptimisation_BoundsCheck
+93/98 Test #93: EnumOverOptimisation_BoundsCheck ................................................................................................   Passed    0.09 sec
+      Start 94: EnumOverOptimisation_Bitmask
+94/98 Test #94: EnumOverOptimisation_Bitmask ....................................................................................................   Passed    0.09 sec
+      Start 95: SetBitIterator tests
+95/98 Test #95: SetBitIterator tests ............................................................................................................   Passed    0.09 sec
+      Start 96: AlternatingIterator tests
+96/98 Test #96: AlternatingIterator tests .......................................................................................................   Passed    0.09 sec
+      Start 97: regression_regression
+97/98 Test #97: regression_regression ...........................................................................................................   Passed    1.79 sec
+      Start 98: regression_stationlist
+98/98 Test #98: regression_stationlist ..........................................................................................................   Passed    1.60 sec
+
+100% tests passed, 0 tests failed out of 98
+
+Total Test time (real) =  12.66 sec

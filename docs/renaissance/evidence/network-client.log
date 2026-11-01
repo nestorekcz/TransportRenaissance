@@ -1,0 +1,9 @@
+[2026-11-01 11:25:16] dbg: [net:3] Starting network
+[2026-11-01 11:25:16] dbg: [net:3] Initializing UDP listeners
+[2026-11-01 11:25:16] dbg: [net:3] Network online, multiplayer available
+[2026-11-01 11:25:16] dbg: [net:3] Detected broadcast addresses:
+[2026-11-01 11:25:16] dbg: [net:3]   0) <host-broadcast-address>
+[2026-11-01 11:25:16] dbg: [net:3] Network revision name: 20261101-renaissance-gf898f8cd97
+[2026-11-01 11:25:18] dbg: [net:3] Initializing UDP listeners
+[2026-11-01 11:25:18] dbg: [net:3] Connected to 127.0.0.1:39791
+[2026-11-01 11:25:18] dbg: [net:3] [crypto] Creating a new random key

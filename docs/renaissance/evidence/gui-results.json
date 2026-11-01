@@ -1,0 +1,22 @@
+[
+  {
+    "name": "baseline",
+    "mode": "gui",
+    "repeat": 0,
+    "exit_code": 0,
+    "wall_seconds": 52.395,
+    "peak_working_set_bytes": 84459520,
+    "scene": "<workspace>\\artifacts\\baseline-runtime\\save\\renaissance-coast.sav",
+    "metrics": "Console log output started to 'metrics.log'.\nBased on num. data points: 64 128 512\nGame loop rate: 37.04fps  (expected: 37.04fps)\nDrawing rate: 60.07fps  (expected: 33.33fps)\nVideo output rate: 60.07fps  (expected: 60.00fps)\nGame loop times: 0.02ms  0.03ms  0.02ms\n  GL station ticks times: 0.00ms  0.00ms  0.00ms\n  GL train ticks times: 0.01ms  0.01ms  0.00ms\n  GL road vehicle ticks times: 0.00ms  0.00ms  0.00ms\n  GL ship ticks times: 0.00ms  0.00ms  0.00ms\n  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms\n  GL landscape ticks times: 0.01ms  0.01ms  0.01ms\nDrawing times: 0.04ms  0.05ms  0.03ms\n  Viewport drawing times: 0.03ms  0.04ms  0.02ms\nVideo output times: 0.43ms  0.53ms  0.49ms\nSound mixing times: 0.00ms  0.00ms  0.00ms\nAI/GS scripts total times: 0.00ms  0.00ms  0.00ms\nGame script times: 0.00ms  0.00ms  0.00ms\nConsole log file closed.\n"
+  },
+  {
+    "name": "fork",
+    "mode": "gui",
+    "repeat": 0,
+    "exit_code": 0,
+    "wall_seconds": 52.698,
+    "peak_working_set_bytes": 84324352,
+    "scene": "<workspace>\\artifacts\\baseline-runtime\\save\\renaissance-coast.sav",
+    "metrics": "Console log output started to 'metrics.log'.\nBased on num. data points: 64 128 512\nGame loop rate: 37.03fps  (expected: 37.04fps)\nDrawing rate: 59.92fps  (expected: 33.33fps)\nVideo output rate: 59.92fps  (expected: 60.00fps)\nGame loop times: 0.02ms  0.03ms  0.02ms\n  GL station ticks times: 0.00ms  0.00ms  0.00ms\n  GL train ticks times: 0.01ms  0.01ms  0.00ms\n  GL road vehicle ticks times: 0.00ms  0.00ms  0.00ms\n  GL ship ticks times: 0.00ms  0.00ms  0.00ms\n  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms\n  GL landscape ticks times: 0.01ms  0.01ms  0.01ms\nDrawing times: 0.04ms  0.06ms  0.03ms\n  Viewport drawing times: 0.03ms  0.05ms  0.02ms\nVideo output times: 0.60ms  0.65ms  0.71ms\nSound mixing times: 0.00ms  0.00ms  0.00ms\nAI/GS scripts total times: 0.00ms  0.00ms  0.00ms\nGame script times: 0.00ms  0.00ms  0.00ms\nConsole log file closed.\n"
+  }
+]

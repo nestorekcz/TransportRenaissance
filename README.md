@@ -1,3 +1,9 @@
+# Transport Renaissance — independent OpenTTD fork
+
+This repository contains a native presentation and management modernization based on OpenTTD 15.3. Transport Renaissance is a provisional project name, with no official OpenTTD affiliation or endorsement. The first playable is a limited terrain, water, steam and station-management slice; it is not a complete art replacement.
+
+See [play/build instructions and engineering records](docs/renaissance/README.md). Original upstream documentation and attribution follow.
+
 # OpenTTD
 
 ## Table of contents

@@ -1,0 +1,23 @@
+[2026-11-01 11:25:15] OpenTTD Game Console Revision 7 - 20261101-renaissance-first-playable-gf898f8cd97
+[2026-11-01 11:25:15] ------------------------------------
+[2026-11-01 11:25:15] use "help" for more information.
+[2026-11-01 11:25:15] 
+[2026-11-01 11:25:15] dbg: [net] Initializing UDP listeners
+[2026-11-01 11:25:15] dbg: [net] Initializing UDP listeners
+[2026-11-01 11:25:15] dbg: [net] Listening on 127.0.0.1:39791 (IPv4)
+[2026-11-01 11:25:15] dbg: [net] Listening on 127.0.0.1:39791 (IPv4)
+[2026-11-01 11:25:15] dbg: [net] [crypto] Creating a new random key
+[2026-11-01 11:25:16] ‎*** Game unpaused (manual)
+[2026-11-01 11:25:18] dbg: [net] [server] Client connected from 127.0.0.1 on frame 97
+[2026-11-01 11:25:18] ‎*** Game paused (connecting clients)
+[2026-11-01 11:25:18] ‎*** Renaissance fork-client has joined the game (Client #2)
+[2026-11-01 11:25:18] dbg: [net] [server] Client #2 (127.0.0.1) joined as Renaissance fork-client
+[2026-11-01 11:25:18] ‎*** Game unpaused (connecting clients)
+[2026-11-01 11:26:16] Client #1  name: 'Renaissance server'  company: 255  IP: server
+[2026-11-01 11:26:16] Client #2  name: 'Renaissance fork-client'  company: 255  IP: 127.0.0.1
+[2026-11-01 11:26:16] ‎*** Renaissance fork-client has left the game (connection lost)
+[2026-11-01 11:26:16] dbg: [net] [server] Client #2 closed connection
+[2026-11-01 11:26:19] dbg: [net] [server] Client connected from 127.0.0.1 on frame 2355
+[2026-11-01 11:26:19] dbg: [net] Client 3 made an error and has been disconnected: wrong revision
+[2026-11-01 11:26:19] dbg: [net] [server] Client #3 closed connection
+[2026-11-01 11:26:22] Client #1  name: 'Renaissance server'  company: 255  IP: server

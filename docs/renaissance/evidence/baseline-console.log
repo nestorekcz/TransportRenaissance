@@ -1,0 +1,27 @@
+Console log output started to 'baseline-console.log'.
+Based on num. data points: 64 128 512
+Game loop rate: 36.98fps  (expected: 37.04fps)
+Drawing rate: 60.00fps  (expected: 33.33fps)
+Video output rate: 60.00fps  (expected: 60.00fps)
+Game loop times: 0.04ms  0.04ms  0.04ms
+  GL station ticks times: 0.00ms  0.00ms  0.00ms
+  GL train ticks times: 0.01ms  0.01ms  0.01ms
+  GL road vehicle ticks times: 0.00ms  0.00ms  0.00ms
+  GL ship ticks times: 0.00ms  0.00ms  0.00ms
+  GL aircraft ticks times: 0.00ms  0.00ms  0.00ms
+  GL landscape ticks times: 0.01ms  0.01ms  0.01ms
+Drawing times: 0.12ms  0.12ms  0.12ms
+  Viewport drawing times: 0.07ms  0.06ms  0.06ms
+Video output times: 0.61ms  0.64ms  0.69ms
+Sound mixing times: 0.00ms  0.00ms  0.01ms
+AI/GS scripts total times: 0.00ms  0.00ms  0.00ms
+Game script times: 0.00ms  0.00ms  0.00ms
+---- gamelog start ----
+Tick 0: new game started
+Revision text changed to 15.3, savegame version 362, not modified, _openttd_newgrf_version = 0x1f386d64
+New game mode: 1 landscape: 0
+---- gamelog end ----
+Game paused.
+Saving map...
+Map successfully saved to 'renaissance-coast.sav'.
+Console log file closed.
