@@ -43,14 +43,16 @@ def package():
         shutil.copy2(save, release / "save")
     shutil.copy2(demo / "renaissance-coast.png", release / "scenario/heightmap")
     shutil.copy2(demo / "game_start.scr", release / "scripts")
-    shutil.copytree(REPO / "docs/renaissance", release / "docs")
-    for name in ("COPYING.md", "CREDITS.md", "README.md"):
+    # Preserve repository-relative guide links in the portable distribution.
+    shutil.copytree(REPO / "docs", release / "docs")
+    for name in ("COPYING.md", "CREDITS.md", "README.md", "COMPILING.md", "CONTRIBUTING.md"):
         shutil.copy2(REPO / name, release / name)
     (release / "START-HERE.md").write_text(
         "# Transport Renaissance — independent OpenTTD fork\n\n"
         "Double-click Launch-TransportRenaissance.cmd. Click Pause to start the coal route.\n\n"
         "Load save/renaissance-attention.sav for a deliberately underserved-station example.\n\n"
-        "Read docs/README.md for controls/build instructions and docs/verification.md for tested limits.\n"
+        "Read [the guide](docs/renaissance/README.md) for controls/build instructions and "
+        "[verification](docs/renaissance/verification.md) for tested limits.\n"
         "Corresponding source is included in sources/. Keep it and all notices when redistributing.\n"
         "This is a limited first playable, not a complete graphics overhaul. No official OpenTTD affiliation.\n")
     shutil.copy2(REPO / "tools/renaissance/dependencies.json", release)
