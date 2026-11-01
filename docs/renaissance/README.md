@@ -34,6 +34,8 @@ Prerequisites: Windows x64, Git, Python 3.9–3.13 (CI selects 3.11), PowerShell
 
 The portable LLVM 23.1.4 compiler needed `-include stdlib.h` to make C allocation declarations available to upstream's bundled fmt. This is a build flag, not a baseline source patch. Assertions remain enabled. PNG, zlib, liblzma, and OpenGL were found; LZO, Breakpad, XAudio2, Ogg, and Opus were not included. The Windows build retains WinMM/DirectMusic. Very old LZO-compressed saves are outside this package's verified support.
 
+The bootstrap first installs `build-requirements.txt`, then builds NML with `--no-build-isolation`: NML 0.7.5 imports `ply` during wheel construction but does not declare it for an isolated build. The initial clean CI run exposed this; the explicit pinned environment avoids relying on a preexisting local wheel cache.
+
 Upstream build guidance remains in [COMPILING.md](../../COMPILING.md). No Linux/macOS executable is claimed to have been tested here. Changes use portable C++; the supplied bootstrap is Windows-specific.
 
 ## Reproduce the content and scene

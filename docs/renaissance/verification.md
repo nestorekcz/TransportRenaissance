@@ -24,6 +24,8 @@ This is a playable Windows checkpoint, not certification of a full graphics over
 
 The first network probe used the unpaced null video driver and missed sync frames, timing out during join. The verification harness was corrected to use the real Windows driver. The passing result is from that real driver; no simulation/network code was altered to hide the probe failure. A separate initial probe collided on identical server/client names; the harness now uses distinct names.
 
+The first hosted CI run exposed NML 0.7.5's undeclared wheel-build dependency on `ply`. Bootstrap now installs a pinned build environment and uses `--no-build-isolation`. This fix was verified by successfully building NML in a fresh local virtual environment with its wheel cache disabled. The hosted run's current status remains independently visible in GitHub Actions.
+
 ## Comparable evidence
 
 | Pair / image | Conditions |
@@ -67,6 +69,6 @@ Save format remains version 362. The baseline save loads; the local setting and 
 
 Matching commit builds are the network boundary. The one-minute loopback test is not long-duration, cross-platform, command-load or reconnect certification. No upstream-client interoperability claim is made. Dedicated mode keeps the upstream simulation path and was actually built and exercised.
 
-Still unverified: Linux/macOS binaries, high-latency and long-session networking, exhaustive company-colour/directional/occlusion cases, all steep slopes/foundations/bridges, extreme UI scales and translated overflow, very large/busy maps, audio audibility through physical speakers, and a clean hosted CI runner. OpenSFX/OpenMSX were installed and accepted, but audio quality is not claimed from visual testing.
+Still unverified: Linux/macOS binaries, high-latency and long-session networking, exhaustive company-colour/directional/occlusion cases, all steep slopes/foundations/bridges, extreme UI scales and translated overflow, very large/busy maps, and audio audibility through physical speakers. OpenSFX/OpenMSX were installed and accepted, but audio quality is not claimed from visual testing. Hosted CI results are separate evidence and must be read from the actual Actions run.
 
 Raw local logs are kept in sibling `artifacts/`. Selected result JSON and test summaries accompany `evidence/`. Final package version, exact fork commit, executable hash and file checksums are in `BUILD-MANIFEST.json`; source is bundled with that exact committed revision.

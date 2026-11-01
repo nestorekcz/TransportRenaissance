@@ -1,5 +1,4 @@
+-r build-requirements.txt
 cmake==3.31.6
 ninja==1.11.1.4
-Pillow==11.1.0
 nml==0.7.5
-ply==3.11

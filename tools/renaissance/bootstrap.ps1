@@ -22,7 +22,10 @@ if (!(Test-Path -LiteralPath "$compiler/bin/clang++.exe")) {
     Expand-Archive -LiteralPath "$toolRoot/llvm-mingw.zip" -DestinationPath $toolRoot
 }
 if (!(Test-Path -LiteralPath "$toolRoot/python/Scripts/python.exe")) { Run 'python' @('-m', 'venv', "$toolRoot/python") }
-Run "$toolRoot/python/Scripts/python.exe" @('-m', 'pip', 'install', '-r', "$PSScriptRoot/requirements.txt")
+# NML 0.7.5 imports ply while building its wheel without declaring it as an
+# isolated build dependency. Install the pinned build environment explicitly.
+Run "$toolRoot/python/Scripts/python.exe" @('-m', 'pip', 'install', '-r', "$PSScriptRoot/build-requirements.txt")
+Run "$toolRoot/python/Scripts/python.exe" @('-m', 'pip', 'install', '--no-build-isolation', '-r', "$PSScriptRoot/requirements.txt")
 $env:PATH = "$compiler/bin;$toolRoot/python/Scripts;$env:PATH"
 foreach ($library in $lock.libraries) {
     $path = Join-Path "$toolRoot/sources" $library.name
