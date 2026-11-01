@@ -1,0 +1,68 @@
+{
+  "upstream": {
+    "url": "https://github.com/OpenTTD/OpenTTD.git",
+    "tag": "15.3",
+    "commit": "14ec60f248547d4d062a1160f0fc26d742319888"
+  },
+  "compiler": {
+    "name": "llvm-mingw-20261020-ucrt-x86_64",
+    "version": "Clang 23.1.4",
+    "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20261020/llvm-mingw-20261020-ucrt-x86_64.zip",
+    "sha256": "fd5462b7f5d93b2ff981fcd3f9c7e427e47f3203c64ea91c27bcc444eebd74cd"
+  },
+  "libraries": [
+    {
+      "name": "zlib",
+      "url": "https://github.com/madler/zlib.git",
+      "tag": "v1.3.2",
+      "commit": "da607da739fa6047df13e66a2af6b8bec7c2a498",
+      "license": "Zlib"
+    },
+    {
+      "name": "xz",
+      "url": "https://github.com/tukaani-project/xz.git",
+      "tag": "v5.8.4",
+      "commit": "d3e650e63c110e830fd5391e7f8b45df0b91d3da",
+      "license": "0BSD (liblzma)"
+    },
+    {
+      "name": "libpng",
+      "url": "https://github.com/pnggroup/libpng.git",
+      "tag": "v1.6.59",
+      "commit": "cd952f49f95bb27154ae77dbb103032d95f6e580",
+      "license": "Libpng"
+    },
+    {
+      "name": "opengfx",
+      "url": "https://github.com/OpenTTD/OpenGFX.git",
+      "tag": "8.0",
+      "commit": "e68bd9b7cb60305aa98c687b6836e0e0b08e2847",
+      "license": "GPL-2.0-only",
+      "source_only": true
+    }
+  ],
+  "content": [
+    {
+      "name": "opengfx",
+      "version": "8.0",
+      "sha256": "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "name": "opensfx",
+      "version": "1.0.3",
+      "sha256": "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
+      "license": "CC-BY-SA-3.0 sounds; GPL-2.0-or-later/CDDL-1.1 other files",
+      "source_url": "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-source.tar.xz",
+      "source_sha256": "43cacb3ca2d86e5729d19c7fcf2533e1bb9c9a32a39f515cf6cbe665ec32635c"
+    },
+    {
+      "name": "openmsx",
+      "version": "0.4.2",
+      "sha256": "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762",
+      "license": "GPL-2.0-only",
+      "source_url": "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-source.tar.xz",
+      "source_sha256": "0f5196f9045c9123ed9207930a73871811654e46e7de2d079be8f8ee501ba840"
+    }
+  ]
+}

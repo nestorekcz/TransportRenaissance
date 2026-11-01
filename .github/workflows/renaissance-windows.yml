@@ -1,0 +1,34 @@
+name: Transport Renaissance native checkpoint
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/renaissance-first-playable]
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          path: TransportRenaissance
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Bootstrap pinned dependencies
+        run: ./TransportRenaissance/tools/renaissance/bootstrap.ps1
+      - name: Build and test the game
+        run: ./TransportRenaissance/tools/renaissance/build.ps1
+      - name: Build and test the dedicated server
+        run: ./TransportRenaissance/tools/renaissance/build.ps1 -Dedicated
+      - name: Package binary with corresponding source
+        run: ./tools/python/Scripts/python.exe TransportRenaissance/tools/renaissance/package.py
+      - uses: actions/upload-artifact@v5
+        with:
+          name: renaissance-windows-source-complete
+          path: artifacts/release/*.zip*
