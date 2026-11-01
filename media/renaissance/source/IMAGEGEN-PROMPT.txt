@@ -1,0 +1,6 @@
+Use case: stylized-concept. Asset type: seamless source texture for actual isometric transport game terrain sprites, not a scene or mockup. Produce a single square tileable material swatch filling the image edge to edge. Orthographic directly overhead view of short natural meadow grass, warm muted olive and sage greens with minute dry straw flecks, softly varied very fine blade detail and tiny low-contrast earth glimpses. Elegant richly detailed miniature world art direction. Even diffuse neutral lighting, no cast shadows, no directional lighting gradient, no horizon, no buildings, no trees, no flowers, no stones, no borders, no text, no watermark. Consistent scale across the entire square; broad variations very restrained, seamless matching edges. It must read as calm fine texture beneath railway infrastructure, with no obvious clumps or focal objects. This will be resampled and projected by a deterministic sprite compiler onto OpenTTD's original 2:1 tile geometry.
+
+Generated with the built-in image_gen tool on 2026-11-01.
+No reference image, third-party artwork, or artist imitation was supplied.
+Output copied into meadow-source.png. The compiler creates game sprites;
+this source texture is not itself an isometric sprite or a gameplay screenshot.

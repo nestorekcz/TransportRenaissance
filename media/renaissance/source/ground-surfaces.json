@@ -1,0 +1,587 @@
+[
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      82,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1011,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      162,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1012,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      242,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1013,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      322,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1014,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      402,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1015,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      482,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1016,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      562,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1017,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      642,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1018,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      722,
+      40,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1019,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      2,
+      88,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1020,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      82,
+      88,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1021,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      162,
+      88,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1022,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      242,
+      88,
+      64,
+      39,
+      -31,
+      -8
+    ],
+    "sprite": 1023,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      322,
+      88,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1024,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      402,
+      88,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1025,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      482,
+      88,
+      64,
+      23,
+      -31,
+      0
+    ],
+    "sprite": 1026,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      562,
+      88,
+      64,
+      31,
+      -31,
+      -8
+    ],
+    "sprite": 1027,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      642,
+      88,
+      64,
+      23,
+      -31,
+      0
+    ],
+    "sprite": 1028,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      722,
+      88,
+      64,
+      31,
+      -31,
+      -8
+    ],
+    "sprite": 1029,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      2,
+      152,
+      64,
+      39,
+      -31,
+      -8
+    ],
+    "sprite": 1030,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      82,
+      152,
+      64,
+      39,
+      -31,
+      -8
+    ],
+    "sprite": 1031,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      162,
+      152,
+      64,
+      23,
+      -31,
+      0
+    ],
+    "sprite": 1032,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      242,
+      152,
+      64,
+      23,
+      -31,
+      0
+    ],
+    "sprite": 1033,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      322,
+      152,
+      64,
+      39,
+      -31,
+      -8
+    ],
+    "sprite": 1034,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      402,
+      152,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1035,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      482,
+      152,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1036,
+    "category": "rail ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      434,
+      2568,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1332,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      514,
+      2568,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1333,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      594,
+      2568,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1334,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      674,
+      2568,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1335,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      2,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1336,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      82,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1337,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      162,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1338,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      242,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1339,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      322,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1340,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      402,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1341,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      482,
+      2632,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1342,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      562,
+      2632,
+      64,
+      39,
+      -31,
+      -8
+    ],
+    "sprite": 1343,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      642,
+      2632,
+      64,
+      23,
+      -31,
+      0
+    ],
+    "sprite": 1344,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      722,
+      2632,
+      64,
+      23,
+      -31,
+      0
+    ],
+    "sprite": 1345,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      2,
+      2696,
+      64,
+      39,
+      -31,
+      -8
+    ],
+    "sprite": 1346,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      82,
+      2696,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1347,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      162,
+      2696,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1348,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      242,
+      2696,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1349,
+    "category": "road ground"
+  },
+  {
+    "source": "opengfx-infrastructure.png",
+    "rect": [
+      322,
+      2696,
+      64,
+      31,
+      -31,
+      0
+    ],
+    "sprite": 1350,
+    "category": "road ground"
+  }
+]
