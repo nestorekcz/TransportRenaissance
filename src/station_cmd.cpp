@@ -5403,3 +5403,17 @@ extern const TileTypeProcs _tile_type_station_procs = {
 	TerraformTile_Station,      // terraform_tile_proc
 	CheckBuildAbove_Station, // check_build_above_proc
 };
+
+/* Inventory-backed regional output must never accumulate fractional promises in multiple
+ * stations. Use the native packet/linkgraph path with whole units and deterministic best rating. */
+uint MoveRegionalGoodsToStation(CargoType cargo, uint amount, Source source, const StationList &stations, Owner exclusivity)
+{
+	Station *best = nullptr;
+	for (Station *st : stations) {
+		if ((exclusivity != INVALID_OWNER && exclusivity != st->owner) || !CanMoveGoodsToStation(st, cargo)) continue;
+		if (best == nullptr || st->goods[cargo].rating > best->goods[cargo].rating) best = st;
+	}
+	if (!best || !amount) return 0;
+	amount = std::max<uint>(1, amount * (best->goods[cargo].rating + 1) / 256);
+	return UpdateStationWaiting(best, cargo, amount * 256, source);
+}

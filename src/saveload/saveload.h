@@ -413,6 +413,8 @@ enum SaveLoadVersion : uint16_t {
 	SLV_LOCKS_UNDER_BRIDGES,                ///< 361  PR#14595 Allow locks under bridges.
 	SLV_ENGINE_MULTI_RAILTYPE,              ///< 362  PR#14357 Train engines can have multiple railtypes.
 
+	SLV_REGIONAL_DEVELOPMENT = 363,         ///< Transport Renaissance regional economy v1.
+
 	SL_MAX_VERSION,                         ///< Highest possible saveload version
 };
 

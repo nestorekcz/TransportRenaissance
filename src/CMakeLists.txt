@@ -523,6 +523,11 @@ add_files(
     toolbar_gui.cpp
     toolbar_gui.h
     town.h
+    regional.h
+    regional_economy.h
+    regional.cpp
+    regional_gui.cpp
+    regional_demo.cpp
     town_cmd.cpp
     town_cmd.h
     town_gui.cpp

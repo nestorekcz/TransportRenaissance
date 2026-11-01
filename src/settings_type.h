@@ -539,6 +539,7 @@ struct VehicleSettings {
 
 /** Settings related to the economy. */
 struct EconomySettings {
+	uint8_t regional_mode = 0; ///< 0 Classic, 1 Builder, 2 sandbox. New worlds only.
 	bool   inflation;                        ///< disable inflation
 	bool   bribe;                            ///< enable bribing the local authority
 	EconomyType type;                        ///< economy type (original/smooth/frozen)

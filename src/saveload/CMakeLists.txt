@@ -8,6 +8,7 @@ add_files(
     autoreplace_sl.cpp
     cargomonitor_sl.cpp
     cargopacket_sl.cpp
+    regional_sl.cpp
     cheat_sl.cpp
     company_sl.cpp
     depot_sl.cpp

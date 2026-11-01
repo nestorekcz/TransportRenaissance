@@ -60,6 +60,8 @@
 #include "table/strings.h"
 #include "table/pricebase.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 
@@ -1065,7 +1067,7 @@ static uint DeliverGoodsToIndustry(const Station *st, CargoType cargo_type, uint
 		/* Insert the industry into _cargo_delivery_destinations, if not yet contained */
 		include(_cargo_delivery_destinations, ind);
 
-		uint amount = std::min(num_pieces, 0xFFFFu - it->waiting);
+		uint amount = std::min(num_pieces, RegionalInputRoom(ind, cargo_type));
 		it->waiting += amount;
 		it->GetOrCreateHistory()[THIS_MONTH].accepted += amount;
 		it->last_accepted = TimerGameEconomy::date;
@@ -1141,6 +1143,7 @@ static Money DeliverGoods(int num_pieces, CargoType cargo_type, StationID dest, 
  */
 static void TriggerIndustryProduction(Industry *i)
 {
+	if (GetRegionalLot(i) != nullptr) { i->was_cargo_delivered = true; return; }
 	const IndustrySpec *indspec = GetIndustrySpec(i->type);
 	IndustryCallbackMasks cbm = indspec->callback_mask;
 

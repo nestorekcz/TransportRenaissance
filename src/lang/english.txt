@@ -5982,3 +5982,40 @@ STR_STATION_LIST_ATTENTION                                     :Needs attention
 STR_STATION_LIST_ATTENTION_TOOLTIP                             :{BLACK}Show stations with available waiting cargo and a service rating below 50% for a selected cargo type. This highlights poor cargo service, not track or platform occupancy. Click again to show all stations matching the other filters.
 STR_CONFIG_SETTING_SMOOTH_WATER                                :Smooth water colour animation: {STRING}
 STR_CONFIG_SETTING_SMOOTH_WATER_HELPTEXT                        :Blend water palette colours between animation steps. Cosmetic and local to this client. Disable for the original palette behaviour. Turn off Full animation in the Settings menu to stop palette motion entirely.
+
+
+STR_REGIONAL_TITLE                                              :{WHITE}Regional development
+STR_REGIONAL_MODE                                               :Regional development: {STRING}
+STR_REGIONAL_MODE_HELP                                          :Optional city building and industrial development. Disabled preserves normal transport gameplay and autonomous towns. Enable before creating a new temperate world with default gameplay content; static visual packs are supported. Sandbox also enables unlimited money. Saved games retain their original choice; this cannot be changed during a game.
+###length 3
+STR_REGIONAL_MODE_CLASSIC                                        :Disabled (Transport Classic)
+STR_REGIONAL_MODE_BUILDER                                        :Enabled (Regional Builder)
+STR_REGIONAL_MODE_SANDBOX                                        :Enabled (sandbox)
+
+STR_REGIONAL_FOUND                                              :{BLACK}Found settlement
+STR_REGIONAL_BUILD                                              :{BLACK}Zone / build
+STR_REGIONAL_INSPECT                                            :{BLACK}Inspect lot
+STR_REGIONAL_OVERVIEW                                           :{BLACK}Region overview
+STR_REGIONAL_NEXT                                               :{BLACK}Next constraint
+STR_REGIONAL_LOCATE                                             :{BLACK}Go to lot
+STR_REGIONAL_REMOVE                                             :{BLACK}Remove zone
+STR_REGIONAL_DEMOLISH                                           :{BLACK}Demolish
+STR_REGIONAL_CAPACITY                                           :{BLACK}Capacity +
+STR_REGIONAL_EFFICIENCY                                         :{BLACK}Efficiency +
+STR_REGIONAL_STORAGE                                            :{BLACK}Storage +
+STR_REGIONAL_CLEAN                                              :{BLACK}Clean up +
+STR_REGIONAL_ERROR                                              :{WHITE}Regional development failed
+STR_REGIONAL_USE_DEMOLISH                                       :{WHITE}Use Regional development > Demolish to preview cost and lost inventories
+STR_REGIONAL_BAD_TOWN                                           :{WHITE}Use a unique name and a flat empty 9 x 5 site, at least 32 tiles from another town and six tiles from the map edge
+STR_REGIONAL_INVALID_SITE                                       :{WHITE}Invalid regional lot: inspect the site in the Regional development window
+STR_REGIONAL_UNFINISHED                                         :{WHITE}Finish construction before upgrading
+STR_REGIONAL_UPGRADE_MAX                                        :{WHITE}Both upgrade levels are already installed
+STR_REGIONAL_CARGO_MINERALS                                     :Bulk minerals
+STR_REGIONAL_CARGO_WOOD                                         :Wood products
+STR_REGIONAL_CARGO_MATERIALS                                    :Construction materials
+STR_REGIONAL_CARGO_MACHINERY                                    :Machinery
+STR_REGIONAL_CARGO_RECYCLABLES                                  :Recyclables
+STR_REGIONAL_CARGO_QUANTITY                                    :{COMMA} units
+STR_REGIONAL_CARGO_ABBREV                                      :RG
+
+STR_REGIONAL_MONEY                                              :{CURRENCY_LONG}

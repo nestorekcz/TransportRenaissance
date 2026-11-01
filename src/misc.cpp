@@ -34,6 +34,8 @@
 #include "newgrf_profiling.h"
 #include "3rdparty/monocypher/monocypher.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 extern TileIndex _cur_tileloop_tile;
@@ -147,6 +149,7 @@ void InitializeGame(uint size_x, uint size_y, bool reset_date, bool reset_settin
 	InitializeScriptGui();
 	InitializeTrees();
 	InitializeIndustries();
+	InitializeRegional();
 	InitializeObjects();
 
 	InitializeCompanies();

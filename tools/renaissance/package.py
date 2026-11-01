@@ -32,7 +32,7 @@ def package():
     release = ARTIFACTS / "release" / f"TransportRenaissance-{revision[:10]}-windows-x64"
     release.mkdir(parents=True, exist_ok=False)
     runtime = ARTIFACTS / "fork-runtime"
-    for name in ("openttd.exe", "libunwind.dll", "openttd.cfg", "Launch-TransportRenaissance.ps1", "Launch-TransportRenaissance.cmd"):
+    for name in ("openttd.exe", "libunwind.dll", "openttd.cfg", "coastal-demo.cfg", "Launch-TransportRenaissance.ps1", "Launch-TransportRenaissance.cmd"):
         shutil.copy2(runtime / name, release / name)
     for name in ("baseset", "newgrf", "lang", "game"):
         shutil.copytree(runtime / name, release / name)
@@ -41,15 +41,20 @@ def package():
     demo = REPO / "media/renaissance/demo"
     for save in demo.glob("*.sav"):
         shutil.copy2(save, release / "save")
+    for save in (REPO / "media/renaissance/regional").glob("*.sav"):
+        shutil.copy2(save, release / "save")
+    shutil.copy2(REPO / "media/renaissance/regional/regional-flat.png", release / "scenario/heightmap")
     shutil.copy2(demo / "renaissance-coast.png", release / "scenario/heightmap")
-    shutil.copy2(demo / "game_start.scr", release / "scripts")
+    shutil.copy2(runtime / "scripts/game_start.scr", release / "scripts")
     # Preserve repository-relative guide links in the portable distribution.
     shutil.copytree(REPO / "docs", release / "docs")
     for name in ("COPYING.md", "CREDITS.md", "README.md", "COMPILING.md", "CONTRIBUTING.md"):
         shutil.copy2(REPO / name, release / name)
     (release / "START-HERE.md").write_text(
         "# Transport Renaissance — independent OpenTTD fork\n\n"
-        "Double-click Launch-TransportRenaissance.cmd. Click Pause to start the coal route.\n\n"
+        "Double-click Launch-TransportRenaissance.cmd to open the main menu. Regional development is disabled by default.\n\n"
+        "To enable it, open Settings > Environment > Towns > Regional development before creating a temperate world.\n\n"
+        "Use Load Game > regional-builder.sav for New Haven, or renaissance-coast.sav for the coal railway.\n\n"
         "Load save/renaissance-attention.sav for a deliberately underserved-station example.\n\n"
         "Read [the guide](docs/renaissance/README.md) for controls/build instructions and "
         "[verification](docs/renaissance/verification.md) for tested limits.\n"

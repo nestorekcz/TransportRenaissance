@@ -52,6 +52,7 @@
 #include "../waypoint_cmd.h"
 #include "../script/script_cmd.h"
 
+#include "../regional.h"
 #include "../safeguards.h"
 
 /** Typed list of all possible callbacks. */

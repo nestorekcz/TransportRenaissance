@@ -2,11 +2,15 @@
 
 Transport Renaissance is a provisional name for an independent OpenTTD fork. It is not an official OpenTTD release and is not affiliated with or endorsed by the OpenTTD project. This is a native game, using the upstream simulation and renderer.
 
-This checkpoint delivers a deliberately limited terrain, water, steam, and station-management slice. It is **not a complete graphics overhaul**. Most structures, vehicles, icons, and windows still use OpenTTD/OpenGFX presentation.
+The game includes terrain, water, steam, station-management improvements and an optional regional economy. It is **not a complete graphics overhaul**. Most structures, vehicles, icons, and windows still use OpenTTD/OpenGFX presentation.
 
 ## Play
 
-On Windows x64, extract the portable distribution and double-click `Launch-TransportRenaissance.cmd`. The coastal demonstration opens paused. Click the pause button to run the coal train. The scene includes Port Aurelia, a coal mine and power station, a working freight railway, two rail stations, rail and road depots, a connecting road, and shoreline.
+On Windows x64, extract the portable distribution and double-click `Launch-TransportRenaissance.cmd`. The normal main menu opens with **Regional development disabled**. New games use normal autonomous towns and transport gameplay.
+
+To opt in, open **Settings → Environment → Towns → Regional development** before creating a world. Choose **Enabled (Regional Builder)** or **Enabled (sandbox)**, then create a temperate world with default gameplay content. The choice is saved with the world and cannot be changed mid-game. Sandbox also enables unlimited money. See the [regional player guide](regional-development.md).
+
+Use **Load Game → regional-builder.sav** to try New Haven's working food chain. The coastal railway remains available as `renaissance-coast.sav`; unpause to run its coal train. `Launch-TransportRenaissance.ps1 -Demo` opens that save directly, and `-Generate` regenerates it with its separate demo configuration.
 
 The station-list toolbar opens the company menu. Select the company, then **Needs attention** to show stations with available waiting cargo and a displayed service rating below 50%, respecting the existing cargo/facility filters. A healthy route may correctly produce an empty list. This is not a platform-occupancy detector.
 
@@ -21,7 +25,7 @@ The verified baseline is upstream tag **15.3**, commit **14ec60f248547d4d062a116
 ```powershell
 git clone https://github.com/nestorekcz/TransportRenaissance.git TransportRenaissance
 cd TransportRenaissance
-git checkout codex/renaissance-first-playable
+git checkout main
 git remote add upstream https://github.com/OpenTTD/OpenTTD.git
 .\tools\renaissance\bootstrap.ps1
 .\tools\renaissance\build.ps1
@@ -47,9 +51,13 @@ Upstream build guidance remains in [COMPILING.md](../../COMPILING.md). No Linux/
 
 The asset compiler emits editable NML, 8-bit fallback and 32-bit 1×/2×/4× atlases, the GRF, and a per-sprite coverage manifest. `media/renaissance/source` holds the source artwork, masks, exact infrastructure rectangles, provenance, and generation prompt. The source image alone is not a game-ready sprite.
 
-The demo GameScript constructs the route from a 128×128 heightmap with seed 20261101. The included save was generated and operated by pristine OpenTTD 15.3. For exact screenshot and performance comparisons, use that save, not a newly generated world. `game_start.scr` sets zoom 3 and camera tile (50,43). The launcher uses `-X -x` and a local config to isolate user settings. Output/error handles are redirected because this GUI MinGW build otherwise can fail when diagnostics write to an unavailable console.
+The demo GameScript constructs the route from a 128×128 heightmap with seed 20261101. The coastal save was generated and operated by pristine OpenTTD 15.3. For exact screenshot and performance comparisons, use that save, not a newly generated world; the reference camera is zoom 3 at tile (50,43). The normal launcher uses a separate configuration and an empty startup script, preserving each world's camera and ordinary world-generation defaults. It uses `-X` and a local config to isolate user settings while saving chosen preferences on normal exit. Demo/verification runs additionally use `-x` to keep their fixtures unchanged. Output/error handles are redirected because this GUI MinGW build otherwise can fail when diagnostics write to an unavailable console.
 
 ## Engineering records
+
+- [Regional Builder player guide](regional-development.md)
+- [Regional economy architecture](regional-engineering.md)
+- [Regional verification and measured limits](regional-verification.md)
 
 - [Architecture and extension audit](architecture.md)
 - [Art specification, coverage and provenance](art.md)

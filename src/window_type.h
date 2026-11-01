@@ -732,6 +732,8 @@ enum WindowClass : uint16_t {
 	 */
 	WC_HELPWIN,
 
+	WC_REGIONAL, ///< Regional planning and inspection.
+
 	WC_INVALID = 0xFFFF, ///< Invalid window.
 };
 

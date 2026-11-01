@@ -99,6 +99,8 @@
 #include "table/strings.h"
 #include "table/string_colours.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 Point _tile_fract_coords;
@@ -1119,6 +1121,12 @@ static void HighlightTownLocalAuthorityTiles(const TileInfo *ti)
  */
 static void DrawTileSelection(const TileInfo *ti)
 {
+	const uint8_t regional_colour = RegionalOverlayColour(ti->tile);
+	if (regional_colour) {
+		const std::array<PaletteID, 5> colours{PAL_NONE, PALETTE_TO_YELLOW, PALETTE_TO_GREEN, PALETTE_TO_BLUE, PALETTE_TO_RED};
+		DrawTileSelectionRect(ti, colours[regional_colour]);
+	}
+
 	/* Highlight tiles inside local authority of selected towns. */
 	HighlightTownLocalAuthorityTiles(ti);
 

@@ -4,6 +4,8 @@ This repository contains a native presentation and management modernization base
 
 See [play/build instructions and engineering records](docs/renaissance/README.md). Original upstream documentation and attribution follow.
 
+The opt-in **Regional Builder** expansion adds native city founding, zoning, services, industries and real freight-driven growth. See the [regional player guide](docs/renaissance/regional-development.md), [engineering notes](docs/renaissance/regional-engineering.md) and [verification](docs/renaissance/regional-verification.md). Classic remains available; regional artwork is provisional.
+
 # OpenTTD
 
 ## Table of contents

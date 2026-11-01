@@ -61,6 +61,8 @@
 
 #include "table/strings.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 

@@ -2,7 +2,9 @@ name: Transport Renaissance native checkpoint
 on:
   workflow_dispatch:
   push:
-    branches: [codex/renaissance-first-playable]
+    branches: [main, codex/renaissance-first-playable]
+  pull_request:
+    branches: [main]
 permissions:
   contents: read
 jobs:
@@ -24,6 +26,8 @@ jobs:
         run: ./TransportRenaissance/tools/renaissance/bootstrap.ps1
       - name: Build and test the game
         run: ./TransportRenaissance/tools/renaissance/build.ps1
+      - name: Verify optional regional gameplay and save compatibility
+        run: ./tools/python/Scripts/python.exe TransportRenaissance/tools/renaissance/verify_regional.py
       - name: Build and test the dedicated server
         run: ./TransportRenaissance/tools/renaissance/build.ps1 -Dedicated
       - name: Package binary with corresponding source
@@ -32,3 +36,11 @@ jobs:
         with:
           name: renaissance-windows-source-complete
           path: artifacts/release/*.zip*
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: regional-simulation-evidence
+          path: |
+            artifacts/regional-verification/results.json
+            artifacts/regional-verification/**/*.log
+            artifacts/regional-verification/stress/results.json

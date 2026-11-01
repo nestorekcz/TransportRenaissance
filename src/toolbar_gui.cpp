@@ -73,6 +73,8 @@
 
 #include "dropdown_common_type.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 
@@ -476,12 +478,14 @@ enum TownMenuEntries {
 	TME_SHOW_DIRECTORY = 0,
 	TME_SHOW_FOUND_TOWN,
 	TME_SHOW_PLACE_HOUSES,
+	TME_REGIONAL,
 };
 
 static CallBackFunction ToolbarTownClick(Window *w)
 {
 	DropDownList list;
 	list.push_back(MakeDropDownListStringItem(STR_TOWN_MENU_TOWN_DIRECTORY, TME_SHOW_DIRECTORY));
+	if (RegionalEnabled()) list.push_back(MakeDropDownListStringItem(STR_REGIONAL_TITLE, TME_REGIONAL));
 	if (_settings_game.economy.found_town != TF_FORBIDDEN) list.push_back(MakeDropDownListStringItem(STR_TOWN_MENU_FOUND_TOWN, TME_SHOW_FOUND_TOWN));
 	if (_settings_game.economy.place_houses != PH_FORBIDDEN) list.push_back(MakeDropDownListStringItem(STR_SCENEDIT_TOWN_MENU_PACE_HOUSE, TME_SHOW_PLACE_HOUSES));
 
@@ -500,6 +504,7 @@ static CallBackFunction MenuClickTown(int index)
 {
 	switch (index) {
 		case TME_SHOW_DIRECTORY: ShowTownDirectory(); break;
+		case TME_REGIONAL: if (RegionalEnabled()) ShowRegionalWindow(); break;
 		case TME_SHOW_FOUND_TOWN: // Setting could be changed when the dropdown was open
 			if (_settings_game.economy.found_town != TF_FORBIDDEN) ShowFoundTownWindow();
 			break;

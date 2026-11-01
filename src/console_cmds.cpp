@@ -52,6 +52,8 @@
 
 #include "table/strings.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 /* scriptfile handling */
@@ -3003,6 +3005,7 @@ void IConsoleStdLibRegister()
 #ifdef _DEBUG
 	IConsoleDebugLibRegister();
 #endif
+	RegisterRegionalConsole();
 	IConsole::CmdRegister("fps",                     ConFramerate);
 	IConsole::CmdRegister("fps_wnd",                 ConFramerateWindow);
 

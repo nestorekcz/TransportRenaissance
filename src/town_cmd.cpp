@@ -66,6 +66,8 @@
 #include "table/strings.h"
 #include "table/town_land.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 /* Initialize the town-pool */
@@ -920,6 +922,7 @@ static bool GrowTown(Town *t, TownExpandModes modes);
  */
 static void TownTickHandler(Town *t)
 {
+	if (IsRegionalTown(t->index)) return;
 	if (t->flags.Test(TownFlag::IsGrowing)) {
 		TownExpandModes modes{TownExpandMode::Buildings};
 		if (_settings_game.economy.allow_town_roads) modes.Set(TownExpandMode::Roads);
@@ -2096,7 +2099,7 @@ static void DoCreateTown(Town *t, TileIndex tile, uint32_t townnameparts, TownSi
 	UpdateTownRadius(t);
 
 	int i = x * 4;
-	do {
+	if (!IsRegionalTown(t->index)) do {
 		GrowTown(t, {TownExpandMode::Buildings, TownExpandMode::Roads});
 	} while (--i);
 
@@ -4201,4 +4204,23 @@ extern const TileTypeProcs _tile_type_town_procs = {
 std::span<const DrawBuildingsTileStruct> GetTownDrawTileData()
 {
 	return _town_draw_tile_data;
+}
+
+TownID CreateRegionalTown(TileIndex tile, const std::string &name)
+{
+	auto *t = new Town(tile);
+	_regional_towns.emplace(t->index, RegionalTown{t->index, _current_company});
+	DoCreateTown(t, tile, 0, TSZ_SMALL, false, TL_ORIGINAL, true);
+	t->name = name;
+	t->UpdateVirtCoord();
+	UpdateNearestTownForRoadTiles(false);
+	return t->index;
+}
+void RegionalDrawHouse(TileInfo *ti, uint8_t kind, uint8_t density, uint8_t stage)
+{
+	/* Base-set development artwork. These are single-tile footprints. No lift animation. */
+	HouseID house = kind == Regional::Housing ? std::array<HouseID, 3>{6, 7, 0}[std::min<uint8_t>(density, 2)] : 3;
+	const auto &d = _town_draw_tile_data[(house << 4) | std::min<uint8_t>(stage, 3)];
+	DrawGroundSprite(d.ground.sprite, d.ground.pal);
+	if (d.building.sprite && !IsInvisibilitySet(TO_HOUSES)) AddSortableSpriteToDraw(d.building.sprite, d.building.pal, *ti, d, IsTransparencySet(TO_HOUSES));
 }

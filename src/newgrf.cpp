@@ -48,6 +48,8 @@
 
 #include "table/strings.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 /* TTDPatch extended GRF format codec
@@ -831,6 +833,10 @@ static void CalculateRefitMasks()
 			}
 		}
 		if (!IsValidCargoType(ei->cargo_type)) ei->climates = {};
+
+		if (RegionalEnabled() && e->type == VEH_ROAD && ei->cargo_type == GetCargoTypeByLabel(CT_GOODS) && e->GetGRF() == nullptr) {
+			for (const CargoSpec *cs : CargoSpec::Iterate()) if (cs->is_freight && cs->label != CT_VALUABLES) SetBit(ei->refit_mask, cs->Index());
+		}
 
 		/* Clear refit_mask for not refittable ships */
 		if (e->type == VEH_SHIP && !e->VehInfo<ShipVehicleInfo>().old_refittable) {

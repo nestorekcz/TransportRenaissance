@@ -19,6 +19,8 @@
 #include "table/strings.h"
 #include "table/cargo_const.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 CargoSpec CargoSpec::array[NUM_CARGO];
@@ -103,6 +105,7 @@ void SetupCargoForClimate(LandscapeType l)
 	/* Reset and disable remaining cargo types. */
 	std::fill(insert, std::end(CargoSpec::array), CargoSpec{});
 
+	RegionalSetupCargo();
 	BuildCargoLabelMap();
 }
 
@@ -290,4 +293,19 @@ std::optional<std::string> BuildCargoAcceptanceString(const CargoArray &acceptan
 	if (found) return GetString(label, line.str());
 
 	return std::nullopt;
+}
+
+void RegionalSetupCargo()
+{
+	if (!RegionalEnabled() || _settings_game.game_creation.landscape != LandscapeType::Temperate) return;
+	const std::array<CargoLabel, 6> labels{CT_FOOD, CargoLabel{'BMNR'}, CargoLabel{'WDPR'}, CargoLabel{'BDMT'}, CargoLabel{'MACH'}, CargoLabel{'RCYC'}};
+	const std::array<StringID, 6> names{STR_CARGO_PLURAL_FOOD, STR_REGIONAL_CARGO_MINERALS, STR_REGIONAL_CARGO_WOOD, STR_REGIONAL_CARGO_MATERIALS, STR_REGIONAL_CARGO_MACHINERY, STR_REGIONAL_CARGO_RECYCLABLES};
+	for (size_t n = 0; n < labels.size(); ++n) {
+		auto *cs = CargoSpec::Get(12 + n);
+	 *cs = *std::ranges::find(_default_cargo, n == 0 ? CT_FOOD : CT_STEEL, &CargoSpec::label);
+		cs->label = labels[n]; cs->bitnum = 32 + n;
+		cs->name = cs->name_single = names[n];
+		if (n) { cs->quantifier = STR_REGIONAL_CARGO_QUANTITY; cs->abbrev = STR_REGIONAL_CARGO_ABBREV; cs->initial_payment = n == 5 ? 1800 : 4500; }
+		SetBit(_cargo_mask, cs->Index());
+	}
 }

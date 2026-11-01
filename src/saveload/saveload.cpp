@@ -220,6 +220,7 @@ static SaveLoadParams _sl; ///< Parameters used for/at saveload.
 static const std::vector<ChunkHandlerRef> &ChunkHandlers()
 {
 	/* These define the chunks */
+	extern const ChunkHandlerTable _regional_chunk_handlers;
 	extern const ChunkHandlerTable _gamelog_chunk_handlers;
 	extern const ChunkHandlerTable _map_chunk_handlers;
 	extern const ChunkHandlerTable _misc_chunk_handlers;
@@ -259,6 +260,7 @@ static const std::vector<ChunkHandlerRef> &ChunkHandlers()
 
 	/** List of all chunks in a savegame. */
 	static const ChunkHandlerTable _chunk_handler_tables[] = {
+		_regional_chunk_handlers,
 		_gamelog_chunk_handlers,
 		_map_chunk_handlers,
 		_misc_chunk_handlers,

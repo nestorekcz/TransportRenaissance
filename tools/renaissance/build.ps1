@@ -45,7 +45,12 @@ Copy-Item "$compiler/x86_64-w64-mingw32/bin/libunwind.dll" $runtime
 Copy-Item "$repo/media/renaissance/demo/*.nut" "$runtime/game/renaissance-coast"
 Copy-Item "$repo/media/renaissance/demo/renaissance-coast.png" "$runtime/scenario/heightmap"
 Copy-Item "$repo/media/renaissance/demo/*.sav" "$runtime/save"
-$config = Get-Content "$repo/media/renaissance/demo/openttd.cfg" -Raw
+if (!$Baseline) {
+    Copy-Item "$repo/media/renaissance/regional/*.sav" "$runtime/save"
+    Copy-Item "$repo/media/renaissance/regional/regional-flat.png" "$runtime/scenario/heightmap"
+}
+$demoConfig = Get-Content "$repo/media/renaissance/demo/openttd.cfg" -Raw
+$config = if ($Baseline) { $demoConfig } else { Get-Content "$repo/media/renaissance/openttd.cfg" -Raw }
 if (!$Baseline) {
     & "$toolRoot/python/Scripts/python.exe" "$PSScriptRoot/build_assets.py" --output "$artifactRoot/assets" --check
     if ($LASTEXITCODE -ne 0) {
@@ -54,9 +59,13 @@ if (!$Baseline) {
     Copy-Item "$artifactRoot/assets/renaissance-meadow.grf" "$runtime/newgrf"
     $config = $config.Replace('refresh_rate = 60', "refresh_rate = 60`nsmooth_water = true")
     $config += "`n[newgrf-static]`nrenaissance-meadow.grf =`n"
+    $demoConfig = $demoConfig.Replace('refresh_rate = 60', "refresh_rate = 60`nsmooth_water = true")
+    $demoConfig += "`n[newgrf-static]`nrenaissance-meadow.grf =`n"
 }
 Set-Content -LiteralPath "$runtime/openttd.cfg" -Value $config -Encoding utf8
+Set-Content -LiteralPath "$runtime/coastal-demo.cfg" -Value $demoConfig -Encoding utf8
 Copy-Item "$repo/tools/renaissance/launch.ps1" "$runtime/Launch-TransportRenaissance.ps1"
 Copy-Item "$repo/tools/renaissance/launch.cmd" "$runtime/Launch-TransportRenaissance.cmd"
-Copy-Item "$repo/media/renaissance/demo/game_start.scr" "$runtime/scripts/game_start.scr"
+# Normal games and loaded saves retain their own camera; no demo script runs implicitly.
+Set-Content -LiteralPath "$runtime/scripts/game_start.scr" -Value '' -Encoding utf8
 Write-Output "Staged $runtime"

@@ -55,6 +55,8 @@
 #include "table/industry_land.h"
 #include "table/build_industry.h"
 
+#include "regional.h"
+
 #include "safeguards.h"
 
 IndustryPool _industry_pool("Industry");
@@ -328,6 +330,7 @@ static IndustryDrawTileProc * const _industry_draw_tile_procs[5] = {
 
 static void DrawTile_Industry(TileInfo *ti)
 {
+	if (RegionalDrawTile(ti)) return;
 	IndustryGfx gfx = GetIndustryGfx(ti->tile);
 	Industry *ind = Industry::GetByTile(ti->tile);
 	const IndustryTileSpec *indts = GetIndustryTileSpec(gfx);
@@ -411,6 +414,12 @@ static Foundation GetFoundation_Industry(TileIndex tile, Slope tileh)
 
 static void AddAcceptedCargo_Industry(TileIndex tile, CargoArray &acceptance, CargoTypes &always_accepted)
 {
+	if (auto *lot = GetRegionalLot(tile)) {
+		if (lot->stage >= 3) for (const auto &a : Industry::Get(lot->industry)->accepted) {
+			if (RegionalInputRoom(Industry::Get(lot->industry), a.cargo)) acceptance[a.cargo] += 8;
+		}
+		return;
+	}
 	IndustryGfx gfx = GetIndustryGfx(tile);
 	const IndustryTileSpec *itspec = GetIndustryTileSpec(gfx);
 	const Industry *ind = Industry::GetByTile(tile);
@@ -488,6 +497,7 @@ static void GetTileDesc_Industry(TileIndex tile, TileDesc &td)
 
 static CommandCost ClearTile_Industry(TileIndex tile, DoCommandFlags flags)
 {
+	if (GetRegionalLot(tile) != nullptr) return CommandCost(STR_REGIONAL_USE_DEMOLISH);
 	Industry *i = Industry::GetByTile(tile);
 	const IndustrySpec *indspec = GetIndustrySpec(i->type);
 
@@ -840,6 +850,8 @@ static void TileLoop_Industry(TileIndex tile)
 	 * returning from TileLoop_Water. */
 	if (!IsTileType(tile, MP_INDUSTRY)) return;
 
+	if (GetRegionalLot(tile) != nullptr) { RegionalTransport(Industry::GetByTile(tile)); return; }
+
 	TriggerIndustryTileRandomisation(tile, IndustryRandomTrigger::TileLoop);
 
 	if (!IsIndustryCompleted(tile)) {
@@ -951,6 +963,7 @@ static void TileLoop_Industry(TileIndex tile)
 
 static bool ClickTile_Industry(TileIndex tile)
 {
+	if (GetRegionalLot(tile) != nullptr) { ShowRegionalWindow(tile); return true; }
 	ShowIndustryViewWindow(GetIndustryIndex(tile));
 	return true;
 }
@@ -1232,6 +1245,7 @@ static void ProduceIndustryGoods(Industry *i)
 
 void OnTick_Industry()
 {
+	RegionalTick();
 	if (_industry_sound_ctr != 0) {
 		_industry_sound_ctr++;
 
@@ -1246,7 +1260,7 @@ void OnTick_Industry()
 	if (_game_mode == GM_EDITOR) return;
 
 	for (Industry *i : Industry::Iterate()) {
-		ProduceIndustryGoods(i);
+		if (GetRegionalLot(i) == nullptr) ProduceIndustryGoods(i);
 
 		if ((TimerGameTick::counter + i->index) % Ticks::DAY_TICKS == 0) {
 			for (auto &a : i->accepted) a.accumulated_waiting += a.waiting;
@@ -2602,6 +2616,7 @@ void Industry::RecomputeProductionMultipliers()
 
 void Industry::FillCachedName() const
 {
+	if (auto *lot = GetRegionalLot(this)) { this->cached_name = fmt::format("{} {}", GetString(STR_TOWN_NAME, lot->town), Regional::definitions[lot->kind].name); return; }
 	auto tmp_params = MakeParameters(this->index);
 	this->cached_name = GetStringWithArgs(STR_INDUSTRY_NAME, tmp_params);
 }
@@ -2871,6 +2886,7 @@ static const uint PERCENT_TRANSPORTED_80 = 204;
  */
 static void ChangeIndustryProduction(Industry *i, bool monthly)
 {
+	if (GetRegionalLot(i) != nullptr) return;
 	StringID str = STR_NULL;
 	bool closeit = false;
 	const IndustrySpec *indspec = GetIndustrySpec(i->type);
@@ -3299,4 +3315,14 @@ void TrimIndustryAcceptedProduced(Industry *ind)
 	auto itp = std::find_if(std::rbegin(ind->produced), std::rend(ind->produced), [](const auto &p) { return IsValidCargoType(p.cargo); });
 	ind->produced.erase(itp.base(), std::end(ind->produced));
 	ind->produced.shrink_to_fit();
+}
+
+Industry *CreateRegionalIndustry(TileIndex tile, TownID town, CompanyID owner)
+{
+	auto *i = new Industry(tile);
+	/* Native pool, station indexing and packet source identity; recipe and artwork are regional. */
+	DoCreateNewIndustry(i, tile, 6, IndustryTileLayout{{{0, 0}, 39}}, 0, Town::Get(town), owner, 0);
+	i->accepted.clear(); i->produced.clear();
+	i->ctlflags.Set({IndustryControlFlag::NoClosure, IndustryControlFlag::NoProductionDecrease, IndustryControlFlag::NoProductionIncrease});
+	return i;
 }

@@ -20,6 +20,7 @@
 #include "../strings_func.h"
 #include "../misc/history_func.hpp"
 
+#include "../regional.h"
 #include "../safeguards.h"
 
 /**
@@ -46,6 +47,10 @@ void RebuildTownCaches()
 
 		/* Increase the number of houses for every house, but only once. */
 		if (GetHouseNorthPart(house_id) == TileDiffXY(0, 0)) town->cache.num_houses++;
+	}
+
+	for (const auto &[tile, lot] : _regional_lots) {
+		if (auto *town = Town::GetIfValid(lot.town)) { town->cache.population += lot.residents; if (lot.stage == 3 && lot.kind == Regional::Housing) town->cache.num_houses++; }
 	}
 
 	/* Update the population and num_house dependent values */

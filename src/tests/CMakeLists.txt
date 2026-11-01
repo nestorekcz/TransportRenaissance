@@ -6,6 +6,7 @@ add_test_files(
     history_func.cpp
     landscape_partial_pixel_z.cpp
     math_func.cpp
+    regional_economy.cpp
     renaissance_gui.cpp
     mock_environment.h
     mock_fontcache.h

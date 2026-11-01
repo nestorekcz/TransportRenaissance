@@ -73,6 +73,7 @@
 
 #include "table/strings.h"
 
+#include "../regional.h"
 #include "../safeguards.h"
 
 extern Company *DoStartupNewCompany(bool is_ai, CompanyID company = CompanyID::Invalid());
@@ -559,6 +560,7 @@ static void StartScripts()
  */
 bool AfterLoadGame()
 {
+	if (IsSavegameVersionBefore(SLV_REGIONAL_DEVELOPMENT)) _settings_game.economy.regional_mode = 0;
 	SetSignalHandlers();
 
 	extern TileIndex _cur_tileloop_tile; // From landscape.cpp.
@@ -3408,6 +3410,7 @@ bool AfterLoadGame()
 	_gamelog.PrintDebug(1);
 
 	InitializeWindowsAndCaches();
+	RegionalAfterLoad();
 	/* Restore the signals */
 	ResetSignalHandlers();
 

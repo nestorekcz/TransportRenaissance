@@ -60,6 +60,7 @@ std::string_view GetNetworkRevisionString()
 		/* Build for debugging that sends the first part of the seed every frame, practically syncing every frame. */
 		network_revision = fmt::format("dbg_sync-{}", _openttd_revision);
 #endif
+		network_revision = "rg1-" + network_revision; // regional command/save compatibility boundary
 		if (_openttd_revision_tagged) {
 			/* Tagged; do not mangle further, though ensure it's not too long. */
 			if (network_revision.size() >= NETWORK_REVISION_LENGTH) network_revision.resize(NETWORK_REVISION_LENGTH - 1);
@@ -105,6 +106,7 @@ bool IsNetworkCompatibleVersion(std::string_view other)
 {
 	std::string_view our_revision = GetNetworkRevisionString();
 	if (our_revision == other) return true;
+	if (!other.starts_with("rg1-")) return false;
 
 	/* If this version is tagged, then the revision string must be a complete match,
 	 * since there is no git hash suffix in it.
